@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign Up - ToolsShare</title>
+    <link rel="icon" type="image/x-icon" href="assets/favicon.ico">
+    <link rel="stylesheet" href="assets/css/main.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <script src="assets/js/app.js" defer></script>
+</head>
+<body>
+    <a href="#main" class="ts-skip-link">Skip to main content</a>
+    
+    <header class="ts-header" role="banner">
+        <!-- Top Bar -->
+        <div class="ts-header__top">
+            <div class="ts-header__top-container">
+                <div class="ts-header__contact">
+                    <a href="mailto:support@toolsshare.com" aria-label="Email support">
+                        <i class="fas fa-envelope"></i> support@toolsshare.com
+                    </a>
+                    <a href="tel:+919756191568" aria-label="Call support">
+                        <i class="fas fa-phone"></i> +91 9756191568
+                    </a>
+                </div>
+                
+                <div class="ts-header__search">
+                    <label for="header-search" class="sr-only">Search for tools</label>
+                    <input 
+                        type="search" 
+                        id="header-search"
+                        class="ts-header__search-input"
+                        placeholder="Search for power tools, cameras, gardening equipment..."
+                        aria-label="Search for tools"
+                    >
+                </div>
+                
+                <div class="ts-header__social">
+                    <a href="#" aria-label="Facebook"><i class="fab fa-facebook"></i></a>
+                    <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                    <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                    <a href="#" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+                    <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Main Navigation -->
+        <nav class="ts-header__nav" aria-label="Primary navigation">
+            <div class="ts-header__nav-container">
+                <ul class="ts-header__nav-list">
+                    <li class="ts-header__nav-item">
+                        <a href="index.html"><i class="fas fa-home"></i> Home</a>
+                    </li>
+                    <li class="ts-header__nav-item">
+                        <a href="about.html"><i class="fas fa-info-circle"></i> About Us</a>
+                    </li>
+                    <li class="ts-header__nav-item">
+                        <a href="categories.html"><i class="fas fa-th-large"></i> Categories</a>
+                    </li>
+                    <li class="ts-header__nav-item">
+                        <a href="cart.html"><i class="fas fa-shopping-cart"></i> My Cart</a>
+                    </li>
+                    <li class="ts-header__nav-item">
+                        <a href="profile.html"><i class="fas fa-user"></i> Profile</a>
+                    </li>
+                    <li class="ts-header__nav-item">
+                        <a href="terms.html"><i class="fas fa-file-text"></i> Terms of Use</a>
+                    </li>
+                    <li class="ts-header__nav-item">
+                        <a href="login.html"><i class="fas fa-sign-in-alt"></i> LOGIN / SIGNUP</a>
+                    </li>
+                    <li class="ts-header__nav-item">
+                        <a href="#" class="ts-btn ts-btn--primary"><i class="fas fa-plus"></i> LIST YOUR TOOL</a>
+                    </li>
+                    <li class="ts-header__nav-item">
+                        <a href="profile.html#wishlist"><i class="fas fa-heart"></i> WISHLIST</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+        
+        <!-- Tagline -->
+        <div class="ts-header__tagline">
+            <div class="ts-header__tagline-pill">
+                ToolsShare – Your Community Tool Shed
+            </div>
+        </div>
+    </header>
+
+    <main id="main" class="ts-main">
+        <div class="ts-container ts-container--narrow">
+            <!-- Breadcrumbs -->
+            <nav class="ts-breadcrumbs" aria-label="Breadcrumb">
+                <ol>
+                    <li><a href="index.html"><i class="fas fa-home"></i> Home</a></li>
+                    <li>Sign Up</li>
+                </ol>
+            </nav>
+
+            <div class="ts-auth-container ts-text-center">
+                <h1>Join the ToolsShare Community</h1>
+                <p class="ts-mb-8">Create your account to start renting and sharing tools with your neighbors</p>
+
+                <!-- Sign Up Form -->
+                <div class="ts-card">
+                    <form id="signup-form" class="ts-auth-form" novalidate>
+                        <div class="ts-form-group">
+                            <label for="signup-name" class="ts-label ts-label--required">Full Name</label>
+                            <input 
+                                type="text" 
+                                id="signup-name" 
+                                name="name" 
+                                class="ts-input" 
+                                required 
+                                autocomplete="name"
+                                aria-describedby="name-help"
+                            >
+                            <div id="name-help" class="ts-help-text">
+                                Enter your first and last name as it should appear on your profile.
+                            </div>
+                        </div>
+
+                        <div class="ts-form-group">
+                            <label for="signup-email" class="ts-label ts-label--required">Email Address</label>
+                            <input 
+                                type="email" 
+                                id="signup-email" 
+                                name="email" 
+                                class="ts-input" 
+                                required 
+                                autocomplete="email"
+                                aria-describedby="signup-email-help"
+                            >
+                            <div id="signup-email-help" class="ts-help-text">
+                                We'll use this to send you rental confirmations and important updates.
+                            </div>
+                        </div>
+
+                        <div class="ts-form-group">
+                            <label for="signup-password" class="ts-label ts-label--required">Password</label>
+                            <input 
+                                type="password" 
+                                id="signup-password" 
+                                name="password" 
+                                class="ts-input" 
+                                required 
+                                autocomplete="new-password"
+                                aria-describedby="password-requirements"
+                            >
+                            <div id="password-requirements" class="ts-help-text">
+                                Password must be at least 8 characters long and include letters and numbers.
+                            </div>
+                        </div>
+
+                        <div class="ts-form-group">
+                            <label for="signup-confirm-password" class="ts-label ts-label--required">Confirm Password</label>
+                            <input 
+                                type="password" 
+                                id="signup-confirm-password" 
+                                name="confirmPassword" 
+                                class="ts-input" 
+                                required 
+                                autocomplete="new-password"
+                            >
+                        </div>
+
+                        <div class="ts-form-group">
+                            <label for="signup-phone" class="ts-label">Phone Number</label>
+                            <input 
+                                type="tel" 
+                                id="signup-phone" 
+                                name="phone" 
+                                class="ts-input" 
+                                autocomplete="tel"
+                                placeholder="+1 (555) 123-4567"
+                                aria-describedby="phone-help"
+                            >
+                            <div id="phone-help" class="ts-help-text">
+                                Optional: For rental coordination and verification.
+                            </div>
+                        </div>
+
+                        <div class="ts-form-group">
+                            <label class="ts-checkbox-label">
+                                <input type="checkbox" class="ts-checkbox" name="terms" required>
+                                <i class="fas fa-check"></i> 
+                                I agree to the <a href="terms.html" class="ts-link" target="_blank"><i class="fas fa-external-link-alt"></i> Terms of Service</a> 
+                                and <a href="terms.html#privacy" class="ts-link" target="_blank"><i class="fas fa-external-link-alt"></i> Privacy Policy</a>
+                            </label>
+                        </div>
+
+                        <div class="ts-form-group">
+                            <label class="ts-checkbox-label">
+                                <input type="checkbox" class="ts-checkbox" name="newsletter">
+                                <i class="fas fa-check"></i> 
+                                Send me updates about new tools and community features
+                            </label>
+                        </div>
+
+                        <button type="submit" class="ts-btn ts-btn--primary ts-btn--lg" style="width: 100%;">
+                            <i class="fas fa-user-plus"></i> Create My Account
+                        </button>
+                    </form>
+
+                    <div class="ts-auth-links ts-mt-6">
+                        <p>
+                            Already have an account? 
+                            <a href="login.html" class="ts-link">
+                                <i class="fas fa-sign-in-alt"></i> Sign in here
+                            </a>
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Benefits Section -->
+                <section class="ts-signup-benefits ts-mt-8">
+                    <h2>Why Join ToolsShare?</h2>
+                    <div class="ts-grid ts-grid--3 ts-mt-6">
+                        <div class="ts-card ts-text-center">
+                            <div class="ts-card__header">
+                                <i class="fas fa-money-bill-wave" style="font-size: 2.5rem; color: var(--ts-success);"></i>
+                            </div>
+                            <div class="ts-card__content">
+                                <h3>Save Money</h3>
+                                <p>Rent tools instead of buying them. Save up to 80% on project costs.</p>
+                            </div>
+                        </div>
+
+                        <div class="ts-card ts-text-center">
+                            <div class="ts-card__header">
+                                <i class="fas fa-leaf" style="font-size: 2.5rem; color: var(--ts-success);"></i>
+                            </div>
+                            <div class="ts-card__content">
+                                <h3>Go Green</h3>
+                                <p>Reduce waste by sharing tools with your community.</p>
+                            </div>
+                        </div>
+
+                        <div class="ts-card ts-text-center">
+                            <div class="ts-card__header">
+                                <i class="fas fa-users" style="font-size: 2.5rem; color: var(--ts-accent-hover);"></i>
+                            </div>
+                            <div class="ts-card__content">
+                                <h3>Build Community</h3>
+                                <p>Connect with neighbors and help each other with projects.</p>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Community Stats -->
+                <section class="ts-community-stats ts-mt-8">
+                    <h2>Join Our Growing Community</h2>
+                    <figure class="ts-figure">
+                        <img src="https://images.pexels.com/photos/3184360/pexels-photo-3184360.jpeg?auto=compress&cs=tinysrgb&w=800" alt="Community growth chart showing increasing user engagement and tool sharing" loading="lazy">
+                        <figcaption class="ts-figcaption">
+                            Monthly growth in community members and successful tool rentals. Higher values indicate stronger community engagement and platform success.
+                        </figcaption>
+                    </figure>
+                </section>
+            </div>
+        </div>
+    </main>
+
+    <footer class="ts-footer" role="contentinfo">
+        <div class="ts-container">
+            <div class="ts-footer__content">
+                <div class="ts-footer__section">
+                    <h3>Contact Us</h3>
+                    <p><i class="fas fa-envelope"></i> support@toolsshare.com</p>
+                    <p><i class="fas fa-phone"></i> +91 9756191568</p>
+                    <p><i class="fas fa-map-marker-alt"></i> Community Tool Hub</p>
+                </div>
+                
+                <div class="ts-footer__section">
+                    <h3>Quick Links</h3>
+                    <ul class="ts-footer__links">
+                        <li><a href="index.html"><i class="fas fa-home"></i> Home</a></li>
+                        <li><a href="categories.html"><i class="fas fa-th-large"></i> Categories</a></li>
+                        <li><a href="about.html"><i class="fas fa-info-circle"></i> About</a></li>
+                        <li><a href="terms.html"><i class="fas fa-file-text"></i> Terms</a></li>
+                    </ul>
+                </div>
+                
+                <div class="ts-footer__section">
+                    <h3>Account</h3>
+                    <ul class="ts-footer__links">
+                        <li><a href="profile.html"><i class="fas fa-user"></i> Profile</a></li>
+                        <li><a href="cart.html"><i class="fas fa-shopping-cart"></i> Cart</a></li>
+                        <li><a href="login.html"><i class="fas fa-sign-in-alt"></i> Login/Signup</a></li>
+                        <li><a href="profile.html#wishlist"><i class="fas fa-heart"></i> Wishlist</a></li>
+                    </ul>
+                </div>
+                
+                <div class="ts-footer__section">
+                    <h3>Follow Us</h3>
+                    <div class="ts-footer__social">
+                        <a href="#" aria-label="Facebook"><i class="fab fa-facebook"></i></a>
+                        <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                        <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                        <a href="#" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+                        <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+                    </div>
+                    <div class="ts-mt-4">
+                        <a href="#" class="ts-btn ts-btn--sm ts-btn--primary">
+                            <i class="fab fa-linkedin"></i> Connect on LinkedIn
+                        </a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="ts-footer__bottom">
+                <p>&copy; 2025 ToolsShare. All rights reserved.</p>
+                <p class="ts-footer__dev-notes">Code is public at: <a href="#" target="_blank"><i class="fab fa-github"></i> [REPO LINK PLACEHOLDER]</a></p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

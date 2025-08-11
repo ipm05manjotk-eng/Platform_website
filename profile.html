@@ -1,0 +1,600 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Profile - ToolsShare</title>
+    <link rel="icon" type="image/x-icon" href="assets/favicon.ico">
+    <link rel="stylesheet" href="assets/css/main.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <script src="assets/js/app.js" defer></script>
+</head>
+<body>
+    <a href="#main" class="ts-skip-link">Skip to main content</a>
+    
+    <header class="ts-header" role="banner">
+        <!-- Top Bar -->
+        <div class="ts-header__top">
+            <div class="ts-header__top-container">
+                <div class="ts-header__contact">
+                    <a href="mailto:support@toolsshare.com" aria-label="Email support">
+                        <i class="fas fa-envelope"></i> support@toolsshare.com
+                    </a>
+                    <a href="tel:+919756191568" aria-label="Call support">
+                        <i class="fas fa-phone"></i> +91 9756191568
+                    </a>
+                </div>
+                
+                <div class="ts-header__search">
+                    <label for="header-search" class="sr-only">Search for tools</label>
+                    <input 
+                        type="search" 
+                        id="header-search"
+                        class="ts-header__search-input"
+                        placeholder="Search for power tools, cameras, gardening equipment..."
+                        aria-label="Search for tools"
+                    >
+                </div>
+                
+                <div class="ts-header__social">
+                    <a href="#" aria-label="Facebook"><i class="fab fa-facebook"></i></a>
+                    <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                    <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                    <a href="#" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+                    <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Main Navigation -->
+        <nav class="ts-header__nav" aria-label="Primary navigation">
+            <div class="ts-header__nav-container">
+                <ul class="ts-header__nav-list">
+                    <li class="ts-header__nav-item">
+                        <a href="index.html"><i class="fas fa-home"></i> Home</a>
+                    </li>
+                    <li class="ts-header__nav-item">
+                        <a href="about.html"><i class="fas fa-info-circle"></i> About Us</a>
+                    </li>
+                    <li class="ts-header__nav-item">
+                        <a href="categories.html"><i class="fas fa-th-large"></i> Categories</a>
+                    </li>
+                    <li class="ts-header__nav-item">
+                        <a href="cart.html"><i class="fas fa-shopping-cart"></i> My Cart</a>
+                    </li>
+                    <li class="ts-header__nav-item">
+                        <a href="profile.html"><i class="fas fa-user"></i> Profile</a>
+                    </li>
+                    <li class="ts-header__nav-item">
+                        <a href="terms.html"><i class="fas fa-file-text"></i> Terms of Use</a>
+                    </li>
+                    <li class="ts-header__nav-item">
+                        <a href="login.html"><i class="fas fa-sign-in-alt"></i> LOGIN / SIGNUP</a>
+                    </li>
+                    <li class="ts-header__nav-item">
+                        <a href="#" class="ts-btn ts-btn--primary"><i class="fas fa-plus"></i> LIST YOUR TOOL</a>
+                    </li>
+                    <li class="ts-header__nav-item">
+                        <a href="profile.html#wishlist"><i class="fas fa-heart"></i> WISHLIST</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+        
+        <!-- Tagline -->
+        <div class="ts-header__tagline">
+            <div class="ts-header__tagline-pill">
+                ToolsShare – Your Community Tool Shed
+            </div>
+        </div>
+    </header>
+
+    <main id="main" class="ts-main">
+        <div class="ts-container">
+            <!-- Breadcrumbs -->
+            <nav class="ts-breadcrumbs" aria-label="Breadcrumb">
+                <ol>
+                    <li><a href="index.html"><i class="fas fa-home"></i> Home</a></li>
+                    <li>My Profile</li>
+                </ol>
+            </nav>
+
+            <div style="display: grid; grid-template-columns: 1fr 3fr; gap: 2rem;">
+                <!-- Profile Sidebar -->
+                <aside class="ts-profile-sidebar" role="complementary">
+                    <div class="ts-card ts-text-center">
+                        <figure class="ts-figure ts-mb-4">
+                            <img src="https://images.pexels.com/photos/2379004/pexels-photo-2379004.jpeg?auto=compress&cs=tinysrgb&w=300" alt="Profile photo of John Smith, a friendly community member" class="ts-profile-avatar" style="width: 150px; height: 150px; border-radius: 50%; object-fit: cover;">
+                            <figcaption class="ts-figcaption">
+                                Community member since 2023 with excellent rental history and tool sharing contributions.
+                            </figcaption>
+                        </figure>
+                        
+                        <h2>John Smith</h2>
+                        <p class="ts-profile-location">
+                            <i class="fas fa-map-marker-alt"></i> Downtown District
+                        </p>
+                        <p class="ts-profile-rating">
+                            <i class="fas fa-star"></i> 4.9/5 (32 reviews)
+                        </p>
+                        
+                        <div class="ts-profile-stats ts-mt-4">
+                            <div class="ts-stat">
+                                <span class="ts-stat-number">47</span>
+                                <span class="ts-stat-label">Tools Rented</span>
+                            </div>
+                            <div class="ts-stat">
+                                <span class="ts-stat-number">12</span>
+                                <span class="ts-stat-label">Tools Listed</span>
+                            </div>
+                            <div class="ts-stat">
+                                <span class="ts-stat-number">$340</span>
+                                <span class="ts-stat-label">Earned</span>
+                            </div>
+                        </div>
+
+                        <div class="ts-profile-actions ts-mt-6">
+                            <button class="ts-btn ts-btn--primary" id="edit-profile-btn">
+                                <i class="fas fa-edit"></i> Edit Profile
+                            </button>
+                            <button class="ts-btn ts-btn--secondary">
+                                <i class="fas fa-plus"></i> Add Tool
+                            </button>
+                        </div>
+                    </div>
+                </aside>
+
+                <!-- Main Profile Content -->
+                <section class="ts-profile-content">
+                    <!-- Profile Tabs -->
+                    <div class="ts-tabs">
+                        <ul class="ts-tabs__list" role="tablist" aria-label="Profile sections">
+                            <li role="presentation">
+                                <button class="ts-tabs__tab" role="tab" aria-selected="true" aria-controls="overview-panel" id="overview-tab">
+                                    <i class="fas fa-tachometer-alt"></i> Overview
+                                </button>
+                            </li>
+                            <li role="presentation">
+                                <button class="ts-tabs__tab" role="tab" aria-selected="false" aria-controls="orders-panel" id="orders-tab">
+                                    <i class="fas fa-history"></i> Past Orders
+                                </button>
+                            </li>
+                            <li role="presentation">
+                                <button class="ts-tabs__tab" role="tab" aria-selected="false" aria-controls="wishlist-panel" id="wishlist-tab">
+                                    <i class="fas fa-heart"></i> Wishlist
+                                </button>
+                            </li>
+                            <li role="presentation">
+                                <button class="ts-tabs__tab" role="tab" aria-selected="false" aria-controls="settings-panel" id="settings-tab">
+                                    <i class="fas fa-cog"></i> Settings
+                                </button>
+                            </li>
+                        </ul>
+
+                        <!-- Overview Panel -->
+                        <div class="ts-tabs__panel" role="tabpanel" id="overview-panel" aria-labelledby="overview-tab">
+                            <div class="ts-grid ts-grid--2 ts-mb-8">
+                                <div class="ts-card">
+                                    <h3><i class="fas fa-clock"></i> Recent Activity</h3>
+                                    <ul class="ts-activity-list">
+                                        <li class="ts-activity-item">
+                                            <i class="fas fa-check-circle text-success"></i>
+                                            <span>Returned DSLR Camera Kit</span>
+                                            <time>2 days ago</time>
+                                        </li>
+                                        <li class="ts-activity-item">
+                                            <i class="fas fa-shopping-cart text-primary"></i>
+                                            <span>Rented Circular Saw</span>
+                                            <time>1 week ago</time>
+                                        </li>
+                                        <li class="ts-activity-item">
+                                            <i class="fas fa-plus text-success"></i>
+                                            <span>Listed Pressure Washer</span>
+                                            <time>2 weeks ago</time>
+                                        </li>
+                                        <li class="ts-activity-item">
+                                            <i class="fas fa-star text-warning"></i>
+                                            <span>Received 5-star review</span>
+                                            <time>3 weeks ago</time>
+                                        </li>
+                                    </ul>
+                                </div>
+
+                                <div class="ts-card">
+                                    <h3><i class="fas fa-chart-line"></i> Quick Stats</h3>
+                                    <div class="ts-quick-stats">
+                                        <div class="ts-quick-stat">
+                                            <span class="ts-stat-label">This Month</span>
+                                            <span class="ts-stat-value">5 rentals</span>
+                                        </div>
+                                        <div class="ts-quick-stat">
+                                            <span class="ts-stat-label">Avg. Rating</span>
+                                            <span class="ts-stat-value">4.9 ⭐</span>
+                                        </div>
+                                        <div class="ts-quick-stat">
+                                            <span class="ts-stat-label">Response Time</span>
+                                            <span class="ts-stat-value">< 2 hours</span>
+                                        </div>
+                                        <div class="ts-quick-stat">
+                                            <span class="ts-stat-label">Member Since</span>
+                                            <span class="ts-stat-value">Jan 2023</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="ts-card">
+                                <h3><i class="fas fa-tools"></i> My Listed Tools</h3>
+                                <div class="ts-grid ts-grid--3">
+                                    <div class="ts-tool-card">
+                                        <img src="https://images.pexels.com/photos/416978/pexels-photo-416978.jpeg?auto=compress&cs=tinysrgb&w=200" alt="Garden tool set" loading="lazy">
+                                        <h4>Garden Tool Set</h4>
+                                        <p>$15/day • Available</p>
+                                        <div class="ts-tool-actions">
+                                            <button class="ts-btn ts-btn--sm ts-btn--secondary">
+                                                <i class="fas fa-edit"></i> Edit
+                                            </button>
+                                            <button class="ts-btn ts-btn--sm ts-btn--danger">
+                                                <i class="fas fa-pause"></i> Pause
+                                            </button>
+                                        </div>
+                                    </div>
+
+                                    <div class="ts-tool-card">
+                                        <img src="https://images.pexels.com/photos/1266810/pexels-photo-1266810.jpeg?auto=compress&cs=tinysrgb&w=200" alt="Pressure washer" loading="lazy">
+                                        <h4>Pressure Washer</h4>
+                                        <p>$40/day • Rented</p>
+                                        <div class="ts-tool-actions">
+                                            <button class="ts-btn ts-btn--sm ts-btn--secondary">
+                                                <i class="fas fa-edit"></i> Edit
+                                            </button>
+                                            <button class="ts-btn ts-btn--sm ts-btn--warning">
+                                                <i class="fas fa-clock"></i> Track
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Past Orders Panel -->
+                        <div class="ts-tabs__panel" role="tabpanel" id="orders-panel" aria-labelledby="orders-tab" hidden>
+                            <div class="ts-card">
+                                <h3><i class="fas fa-history"></i> Rental History</h3>
+                                <table class="ts-table">
+                                    <caption>Complete history of tool rentals</caption>
+                                    <thead>
+                                        <tr>
+                                            <th scope="col">Tool</th>
+                                            <th scope="col">Dates</th>
+                                            <th scope="col">Owner</th>
+                                            <th scope="col">Total</th>
+                                            <th scope="col">Status</th>
+                                            <th scope="col">Actions</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>
+                                                <div class="ts-order-tool">
+                                                    <img src="https://images.pexels.com/photos/90946/pexels-photo-90946.jpeg?auto=compress&cs=tinysrgb&w=100" alt="DSLR Camera" loading="lazy">
+                                                    <span>DSLR Camera Kit</span>
+                                                </div>
+                                            </td>
+                                            <td>Jan 15-17, 2025</td>
+                                            <td>Sarah M.</td>
+                                            <td>$135.00</td>
+                                            <td><span class="ts-status ts-status--completed"><i class="fas fa-check"></i> Completed</span></td>
+                                            <td>
+                                                <button class="ts-btn ts-btn--sm ts-btn--secondary">
+                                                    <i class="fas fa-star"></i> Review
+                                                </button>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <div class="ts-order-tool">
+                                                    <img src="https://images.pexels.com/photos/5691659/pexels-photo-5691659.jpeg?auto=compress&cs=tinysrgb&w=100" alt="Circular Saw" loading="lazy">
+                                                    <span>Circular Saw</span>
+                                                </div>
+                                            </td>
+                                            <td>Jan 8-10, 2025</td>
+                                            <td>Mike R.</td>
+                                            <td>$105.00</td>
+                                            <td><span class="ts-status ts-status--completed"><i class="fas fa-check"></i> Completed</span></td>
+                                            <td>
+                                                <button class="ts-btn ts-btn--sm ts-btn--secondary">
+                                                    <i class="fas fa-redo"></i> Rent Again
+                                                </button>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <div class="ts-order-tool">
+                                                    <img src="https://images.pexels.com/photos/162553/keys-workshop-mechanic-tools-162553.jpeg?auto=compress&cs=tinysrgb&w=100" alt="Drill Set" loading="lazy">
+                                                    <span>Professional Drill Set</span>
+                                                </div>
+                                            </td>
+                                            <td>Dec 28-30, 2024</td>
+                                            <td>Lisa K.</td>
+                                            <td>$75.00</td>
+                                            <td><span class="ts-status ts-status--completed"><i class="fas fa-check"></i> Completed</span></td>
+                                            <td>
+                                                <button class="ts-btn ts-btn--sm ts-btn--secondary">
+                                                    <i class="fas fa-receipt"></i> Receipt
+                                                </button>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+
+                        <!-- Wishlist Panel -->
+                        <div class="ts-tabs__panel" role="tabpanel" id="wishlist-panel" aria-labelledby="wishlist-tab" hidden>
+                            <div class="ts-card">
+                                <h3><i class="fas fa-heart"></i> My Wishlist</h3>
+                                <div class="ts-grid ts-grid--3" id="wishlist-grid">
+                                    <article class="ts-card ts-product-card">
+                                        <div class="ts-card__header">
+                                            <img src="https://images.pexels.com/photos/1266810/pexels-photo-1266810.jpeg?auto=compress&cs=tinysrgb&w=400" alt="Tile Saw" loading="lazy">
+                                        </div>
+                                        <div class="ts-card__content">
+                                            <h4 class="ts-card__title">Tile Saw</h4>
+                                            <p class="ts-card__subtitle">⭐⭐⭐⭐⭐ (22 reviews)</p>
+                                            <p class="ts-price">$50/day</p>
+                                        </div>
+                                        <div class="ts-card__footer">
+                                            <button class="ts-btn ts-btn--sm ts-btn--primary" data-action="add-to-cart" data-product-id="tile-saw">
+                                                <i class="fas fa-cart-plus"></i> Add to Cart
+                                            </button>
+                                            <button class="ts-btn ts-btn--sm ts-btn--danger" data-action="remove-from-wishlist" data-product-id="tile-saw">
+                                                <i class="fas fa-trash"></i> Remove
+                                            </button>
+                                        </div>
+                                    </article>
+
+                                    <article class="ts-card ts-product-card">
+                                        <div class="ts-card__header">
+                                            <img src="https://images.pexels.com/photos/3752198/pexels-photo-3752198.jpeg?auto=compress&cs=tinysrgb&w=400" alt="Socket Wrench Set" loading="lazy">
+                                        </div>
+                                        <div class="ts-card__content">
+                                            <h4 class="ts-card__title">Socket Wrench Set</h4>
+                                            <p class="ts-card__subtitle">⭐⭐⭐⭐☆ (15 reviews)</p>
+                                            <p class="ts-price">$20/day</p>
+                                        </div>
+                                        <div class="ts-card__footer">
+                                            <button class="ts-btn ts-btn--sm ts-btn--primary" data-action="add-to-cart" data-product-id="wrench-set">
+                                                <i class="fas fa-cart-plus"></i> Add to Cart
+                                            </button>
+                                            <button class="ts-btn ts-btn--sm ts-btn--danger" data-action="remove-from-wishlist" data-product-id="wrench-set">
+                                                <i class="fas fa-trash"></i> Remove
+                                            </button>
+                                        </div>
+                                    </article>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Settings Panel -->
+                        <div class="ts-tabs__panel" role="tabpanel" id="settings-panel" aria-labelledby="settings-tab" hidden>
+                            <div class="ts-grid ts-grid--2">
+                                <div class="ts-card">
+                                    <h3><i class="fas fa-user"></i> Personal Information</h3>
+                                    <form id="profile-form" class="ts-profile-edit" novalidate>
+                                        <div class="ts-form-group">
+                                            <label for="profile-name" class="ts-label">Full Name</label>
+                                            <input 
+                                                type="text" 
+                                                id="profile-name" 
+                                                name="name" 
+                                                class="ts-input" 
+                                                value="John Smith"
+                                                readonly
+                                            >
+                                        </div>
+
+                                        <div class="ts-form-group">
+                                            <label for="profile-email" class="ts-label">Email Address</label>
+                                            <input 
+                                                type="email" 
+                                                id="profile-email" 
+                                                name="email" 
+                                                class="ts-input" 
+                                                value="john.smith@email.com"
+                                                readonly
+                                            >
+                                        </div>
+
+                                        <div class="ts-form-group">
+                                            <label for="profile-phone" class="ts-label">Phone Number</label>
+                                            <input 
+                                                type="tel" 
+                                                id="profile-phone" 
+                                                name="phone" 
+                                                class="ts-input" 
+                                                value="+1 (555) 123-4567"
+                                                readonly
+                                            >
+                                        </div>
+
+                                        <div class="ts-form-group">
+                                            <label for="profile-location" class="ts-label">Location</label>
+                                            <input 
+                                                type="text" 
+                                                id="profile-location" 
+                                                name="location" 
+                                                class="ts-input" 
+                                                value="Downtown District"
+                                                readonly
+                                            >
+                                        </div>
+
+                                        <div class="ts-form-actions" style="display: none;" id="profile-form-actions">
+                                            <button type="submit" class="ts-btn ts-btn--primary">
+                                                <i class="fas fa-save"></i> Save Changes
+                                            </button>
+                                            <button type="button" class="ts-btn ts-btn--secondary" id="cancel-edit">
+                                                <i class="fas fa-times"></i> Cancel
+                                            </button>
+                                        </div>
+                                    </form>
+                                </div>
+
+                                <div class="ts-card">
+                                    <h3><i class="fas fa-bell"></i> Notification Preferences</h3>
+                                    <form id="notifications-form">
+                                        <div class="ts-form-group">
+                                            <label class="ts-checkbox-label">
+                                                <input type="checkbox" class="ts-checkbox" name="emailRentals" checked>
+                                                <i class="fas fa-check"></i> Rental confirmations and updates
+                                            </label>
+                                        </div>
+
+                                        <div class="ts-form-group">
+                                            <label class="ts-checkbox-label">
+                                                <input type="checkbox" class="ts-checkbox" name="emailNewTools" checked>
+                                                <i class="fas fa-check"></i> New tools in your area
+                                            </label>
+                                        </div>
+
+                                        <div class="ts-form-group">
+                                            <label class="ts-checkbox-label">
+                                                <input type="checkbox" class="ts-checkbox" name="emailPromotions">
+                                                <i class="fas fa-check"></i> Promotions and special offers
+                                            </label>
+                                        </div>
+
+                                        <div class="ts-form-group">
+                                            <label class="ts-checkbox-label">
+                                                <input type="checkbox" class="ts-checkbox" name="smsReminders" checked>
+                                                <i class="fas fa-check"></i> SMS rental reminders
+                                            </label>
+                                        </div>
+
+                                        <button type="submit" class="ts-btn ts-btn--primary">
+                                            <i class="fas fa-save"></i> Save Preferences
+                                        </button>
+                                    </form>
+                                </div>
+                            </div>
+
+                            <div class="ts-card ts-mt-6">
+                                <h3><i class="fas fa-map-marker-alt"></i> My Addresses</h3>
+                                <div class="ts-addresses">
+                                    <div class="ts-address-card">
+                                        <div class="ts-address-info">
+                                            <h4>Home Address</h4>
+                                            <p>123 Main Street<br>Downtown District<br>Anytown, ST 12345</p>
+                                        </div>
+                                        <div class="ts-address-actions">
+                                            <button class="ts-btn ts-btn--sm ts-btn--secondary">
+                                                <i class="fas fa-edit"></i> Edit
+                                            </button>
+                                            <button class="ts-btn ts-btn--sm ts-btn--danger">
+                                                <i class="fas fa-trash"></i> Remove
+                                            </button>
+                                        </div>
+                                    </div>
+
+                                    <button class="ts-btn ts-btn--primary ts-mt-4">
+                                        <i class="fas fa-plus"></i> Add New Address
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </div>
+        </div>
+    </main>
+
+    <footer class="ts-footer" role="contentinfo">
+        <div class="ts-container">
+            <div class="ts-footer__content">
+                <div class="ts-footer__section">
+                    <h3>Contact Us</h3>
+                    <p><i class="fas fa-envelope"></i> support@toolsshare.com</p>
+                    <p><i class="fas fa-phone"></i> +91 9756191568</p>
+                    <p><i class="fas fa-map-marker-alt"></i> Community Tool Hub</p>
+                </div>
+                
+                <div class="ts-footer__section">
+                    <h3>Quick Links</h3>
+                    <ul class="ts-footer__links">
+                        <li><a href="index.html"><i class="fas fa-home"></i> Home</a></li>
+                        <li><a href="categories.html"><i class="fas fa-th-large"></i> Categories</a></li>
+                        <li><a href="about.html"><i class="fas fa-info-circle"></i> About</a></li>
+                        <li><a href="terms.html"><i class="fas fa-file-text"></i> Terms</a></li>
+                    </ul>
+                </div>
+                
+                <div class="ts-footer__section">
+                    <h3>Account</h3>
+                    <ul class="ts-footer__links">
+                        <li><a href="profile.html"><i class="fas fa-user"></i> Profile</a></li>
+                        <li><a href="cart.html"><i class="fas fa-shopping-cart"></i> Cart</a></li>
+                        <li><a href="login.html"><i class="fas fa-sign-in-alt"></i> Login/Signup</a></li>
+                        <li><a href="profile.html#wishlist"><i class="fas fa-heart"></i> Wishlist</a></li>
+                    </ul>
+                </div>
+                
+                <div class="ts-footer__section">
+                    <h3>Follow Us</h3>
+                    <div class="ts-footer__social">
+                        <a href="#" aria-label="Facebook"><i class="fab fa-facebook"></i></a>
+                        <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                        <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                        <a href="#" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+                        <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+                    </div>
+                    <div class="ts-mt-4">
+                        <a href="#" class="ts-btn ts-btn--sm ts-btn--primary">
+                            <i class="fab fa-linkedin"></i> Connect on LinkedIn
+                        </a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="ts-footer__bottom">
+                <p>&copy; 2025 ToolsShare. All rights reserved.</p>
+                <p class="ts-footer__dev-notes">Code is public at: <a href="#" target="_blank"><i class="fab fa-github"></i> [REPO LINK PLACEHOLDER]</a></p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Profile editing functionality
+        document.getElementById('edit-profile-btn')?.addEventListener('click', function() {
+            const form = document.getElementById('profile-form');
+            const inputs = form.querySelectorAll('input');
+            const actions = document.getElementById('profile-form-actions');
+            
+            inputs.forEach(input => {
+                input.removeAttribute('readonly');
+                input.classList.add('ts-input--editable');
+            });
+            
+            actions.style.display = 'block';
+            this.textContent = 'Editing...';
+            this.disabled = true;
+        });
+
+        document.getElementById('cancel-edit')?.addEventListener('click', function() {
+            const form = document.getElementById('profile-form');
+            const inputs = form.querySelectorAll('input');
+            const actions = document.getElementById('profile-form-actions');
+            const editBtn = document.getElementById('edit-profile-btn');
+            
+            inputs.forEach(input => {
+                input.setAttribute('readonly', true);
+                input.classList.remove('ts-input--editable');
+            });
+            
+            actions.style.display = 'none';
+            editBtn.textContent = '✏️ Edit Profile';
+            editBtn.disabled = false;
+        });
+    </script>
+</body>
+</html>

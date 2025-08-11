@@ -1,0 +1,357 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ToolsShare - Your Community Tool Shed</title>
+    <link rel="icon" type="image/x-icon" href="assets/favicon.ico">
+    <link rel="stylesheet" href="assets/css/main.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <script src="assets/js/app.js" defer></script>
+</head>
+<body>
+    <a href="#main" class="ts-skip-link">Skip to main content</a>
+    
+    <header class="ts-header" role="banner">
+        <!-- Top Bar -->
+        <div class="ts-header__top">
+            <div class="ts-header__top-container">
+                <div class="ts-header__contact">
+                    <a href="mailto:support@toolsshare.com" aria-label="Email support">
+                        <i class="fas fa-envelope"></i> support@toolsshare.com
+                    </a>
+                    <a href="tel:+919756191568" aria-label="Call support">
+                        <i class="fas fa-phone"></i> +91 9756191568
+                    </a>
+                </div>
+                
+                <div class="ts-header__search">
+                    <label for="header-search" class="sr-only">Search for tools</label>
+                    <input 
+                        type="search" 
+                        id="header-search"
+                        class="ts-header__search-input"
+                        placeholder="Search for power tools, cameras, gardening equipment..."
+                        aria-label="Search for tools"
+                    >
+                </div>
+                
+                <div class="ts-header__social">
+                    <a href="#" aria-label="Facebook"><i class="fab fa-facebook"></i></a>
+                    <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                    <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                    <a href="#" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+                    <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Main Navigation -->
+        <nav class="ts-header__nav" aria-label="Primary navigation">
+            <div class="ts-header__nav-container">
+                <ul class="ts-header__nav-list">
+                    <li class="ts-header__nav-item">
+                        <a href="index.html"><i class="fas fa-home"></i> Home</a>
+                    </li>
+                    <li class="ts-header__nav-item">
+                        <a href="about.html"><i class="fas fa-info-circle"></i> About Us</a>
+                    </li>
+                    <li class="ts-header__nav-item">
+                        <a href="categories.html"><i class="fas fa-th-large"></i> Categories</a>
+                    </li>
+                    <li class="ts-header__nav-item">
+                        <a href="cart.html"><i class="fas fa-shopping-cart"></i> My Cart</a>
+                    </li>
+                    <li class="ts-header__nav-item">
+                        <a href="profile.html"><i class="fas fa-user"></i> Profile</a>
+                    </li>
+                    <li class="ts-header__nav-item">
+                        <a href="terms.html"><i class="fas fa-file-text"></i> Terms of Use</a>
+                    </li>
+                    <li class="ts-header__nav-item">
+                        <a href="login.html"><i class="fas fa-sign-in-alt"></i> LOGIN / SIGNUP</a>
+                    </li>
+                    <li class="ts-header__nav-item">
+                        <a href="#" class="ts-btn ts-btn--primary"><i class="fas fa-plus"></i> LIST YOUR TOOL</a>
+                    </li>
+                    <li class="ts-header__nav-item">
+                        <a href="profile.html#wishlist"><i class="fas fa-heart"></i> WISHLIST</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+        
+        <!-- Tagline -->
+        <div class="ts-header__tagline">
+            <div class="ts-header__tagline-pill">
+                ToolsShare – Your Community Tool Shed
+            </div>
+        </div>
+    </header>
+
+    <main id="main" class="ts-main">
+        <div class="ts-container">
+            <!-- Breadcrumbs -->
+            <nav class="ts-breadcrumbs" aria-label="Breadcrumb">
+                <ol>
+                    <li><a href="index.html"><i class="fas fa-home"></i> Home</a></li>
+                </ol>
+            </nav>
+
+            <!-- Hero Section -->
+            <section class="ts-hero ts-text-center ts-mb-8">
+                <h1 class="ts-hero__title">Share Tools, Build Community</h1>
+                <p class="ts-hero__subtitle">Rent high-quality tools from your neighbors. Save money, reduce waste, strengthen connections.</p>
+                <div class="ts-hero__actions">
+                    <a href="categories.html" class="ts-btn ts-btn--primary ts-btn--lg">
+                        <i class="fas fa-search"></i> Browse Categories
+                    </a>
+                    <a href="#" class="ts-btn ts-btn--secondary ts-btn--lg">
+                        <i class="fas fa-plus"></i> List Your Tool
+                    </a>
+                </div>
+            </section>
+
+            <!-- Featured Tools -->
+            <section class="ts-featured-tools ts-mb-8">
+                <h2 class="ts-text-center ts-mb-8">Featured Tools</h2>
+                <div class="ts-grid ts-grid--4" id="featured-tools">
+                    <article class="ts-card ts-product-card" data-category="power-tools" data-price="25" data-condition="excellent">
+                        <div class="ts-card__header">
+                            <img src="https://images.pexels.com/photos/162553/keys-workshop-mechanic-tools-162553.jpeg?auto=compress&cs=tinysrgb&w=400" alt="Professional Drill Set" loading="lazy">
+                        </div>
+                        <div class="ts-card__content">
+                            <h3 class="ts-card__title">Professional Drill Set</h3>
+                            <p class="ts-card__subtitle">⭐⭐⭐⭐⭐ (24 reviews)</p>
+                            <p class="ts-price">$25/day</p>
+                        </div>
+                        <div class="ts-card__footer">
+                            <button class="ts-btn ts-btn--sm ts-btn--primary" data-action="add-to-cart" data-product-id="drill-set">
+                                <i class="fas fa-cart-plus"></i> Add to Cart
+                            </button>
+                            <button class="ts-btn ts-btn--sm ts-btn--secondary" data-action="add-to-wishlist" data-product-id="drill-set">
+                                <i class="fas fa-heart"></i>
+                            </button>
+                            <a href="product.html" class="ts-btn ts-btn--sm ts-btn--secondary">
+                                <i class="fas fa-eye"></i> View
+                            </a>
+                        </div>
+                    </article>
+
+                    <article class="ts-card ts-product-card" data-category="photography" data-price="45" data-condition="good">
+                        <div class="ts-card__header">
+                            <img src="https://images.pexels.com/photos/90946/pexels-photo-90946.jpeg?auto=compress&cs=tinysrgb&w=400" alt="DSLR Camera Kit" loading="lazy">
+                        </div>
+                        <div class="ts-card__content">
+                            <h3 class="ts-card__title">DSLR Camera Kit</h3>
+                            <p class="ts-card__subtitle">⭐⭐⭐⭐⭐ (18 reviews)</p>
+                            <p class="ts-price">$45/day</p>
+                        </div>
+                        <div class="ts-card__footer">
+                            <button class="ts-btn ts-btn--sm ts-btn--primary" data-action="add-to-cart" data-product-id="camera-kit">
+                                <i class="fas fa-cart-plus"></i> Add to Cart
+                            </button>
+                            <button class="ts-btn ts-btn--sm ts-btn--secondary" data-action="add-to-wishlist" data-product-id="camera-kit">
+                                <i class="fas fa-heart"></i>
+                            </button>
+                            <a href="product.html" class="ts-btn ts-btn--sm ts-btn--secondary">
+                                <i class="fas fa-eye"></i> View
+                            </a>
+                        </div>
+                    </article>
+
+                    <article class="ts-card ts-product-card" data-category="gardening" data-price="15" data-condition="good">
+                        <div class="ts-card__header">
+                            <img src="https://images.pexels.com/photos/416978/pexels-photo-416978.jpeg?auto=compress&cs=tinysrgb&w=400" alt="Garden Tool Set" loading="lazy">
+                        </div>
+                        <div class="ts-card__content">
+                            <h3 class="ts-card__title">Garden Tool Set</h3>
+                            <p class="ts-card__subtitle">⭐⭐⭐⭐☆ (12 reviews)</p>
+                            <p class="ts-price">$15/day</p>
+                        </div>
+                        <div class="ts-card__footer">
+                            <button class="ts-btn ts-btn--sm ts-btn--primary" data-action="add-to-cart" data-product-id="garden-set">
+                                <i class="fas fa-cart-plus"></i> Add to Cart
+                            </button>
+                            <button class="ts-btn ts-btn--sm ts-btn--secondary" data-action="add-to-wishlist" data-product-id="garden-set">
+                                <i class="fas fa-heart"></i>
+                            </button>
+                            <a href="product.html" class="ts-btn ts-btn--sm ts-btn--secondary">
+                                <i class="fas fa-eye"></i> View
+                            </a>
+                        </div>
+                    </article>
+
+                    <article class="ts-card ts-product-card" data-category="power-tools" data-price="35" data-condition="excellent">
+                        <div class="ts-card__header">
+                            <img src="https://images.pexels.com/photos/5691659/pexels-photo-5691659.jpeg?auto=compress&cs=tinysrgb&w=400" alt="Circular Saw" loading="lazy">
+                        </div>
+                        <div class="ts-card__content">
+                            <h3 class="ts-card__title">Circular Saw</h3>
+                            <p class="ts-card__subtitle">⭐⭐⭐⭐⭐ (31 reviews)</p>
+                            <p class="ts-price">$35/day</p>
+                        </div>
+                        <div class="ts-card__footer">
+                            <button class="ts-btn ts-btn--sm ts-btn--primary" data-action="add-to-cart" data-product-id="circular-saw">
+                                <i class="fas fa-cart-plus"></i> Add to Cart
+                            </button>
+                            <button class="ts-btn ts-btn--sm ts-btn--secondary" data-action="add-to-wishlist" data-product-id="circular-saw">
+                                <i class="fas fa-heart"></i>
+                            </button>
+                            <a href="product.html" class="ts-btn ts-btn--sm ts-btn--secondary">
+                                <i class="fas fa-eye"></i> View
+                            </a>
+                        </div>
+                    </article>
+                </div>
+            </section>
+
+            <!-- How It Works -->
+            <section class="ts-how-it-works ts-mb-8">
+                <h2 class="ts-text-center ts-mb-8">How It Works</h2>
+                <div class="ts-grid ts-grid--3">
+                    <div class="ts-card ts-text-center">
+                        <div class="ts-card__header">
+                            <i class="fas fa-search" style="font-size: 3rem; color: var(--ts-accent-hover);"></i>
+                        </div>
+                        <div class="ts-card__content">
+                            <h3>1. Browse & Search</h3>
+                            <p>Find the perfect tool from our extensive collection of community-shared items.</p>
+                        </div>
+                    </div>
+                    <div class="ts-card ts-text-center">
+                        <div class="ts-card__header">
+                            <i class="fas fa-handshake" style="font-size: 3rem; color: var(--ts-accent-hover);"></i>
+                        </div>
+                        <div class="ts-card__content">
+                            <h3>2. Rent & Connect</h3>
+                            <p>Book the tool and connect with your neighbor. All payments are secured through escrow.</p>
+                        </div>
+                    </div>
+                    <div class="ts-card ts-text-center">
+                        <div class="ts-card__header">
+                            <i class="fas fa-tools" style="font-size: 3rem; color: var(--ts-accent-hover);"></i>
+                        </div>
+                        <div class="ts-card__content">
+                            <h3>3. Use & Return</h3>
+                            <p>Complete your project and return the tool. Rate your experience to help the community.</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Testimonials -->
+            <section class="ts-testimonials ts-mb-8">
+                <h2 class="ts-text-center ts-mb-8">What Our Community Says</h2>
+                <div class="ts-grid ts-grid--2">
+                    <div class="ts-card">
+                        <div class="ts-card__content">
+                            <p>"ToolsShare saved me hundreds of dollars on my home renovation. The drill I rented was in perfect condition!"</p>
+                            <div class="ts-testimonial-author">
+                                <strong>Sarah M.</strong> - Homeowner
+                                <div>⭐⭐⭐⭐⭐</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="ts-card">
+                        <div class="ts-card__content">
+                            <p>"Great way to make money from tools I rarely use. The platform is easy to use and payments are secure."</p>
+                            <div class="ts-testimonial-author">
+                                <strong>Mike R.</strong> - Tool Owner
+                                <div>⭐⭐⭐⭐⭐</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Tableau Metrics Placeholder -->
+            <section class="ts-metrics ts-mb-8">
+                <h2 class="ts-text-center ts-mb-8">Platform Metrics</h2>
+                <figure class="ts-figure">
+                    <img src="https://images.pexels.com/photos/590022/pexels-photo-590022.jpeg?auto=compress&cs=tinysrgb&w=800" alt="Analytics dashboard showing tool rental metrics" loading="lazy">
+                    <figcaption class="ts-figcaption">
+                        Monthly active rentals and user satisfaction scores. Higher values indicate better platform performance and user engagement.
+                    </figcaption>
+                </figure>
+                <!-- 
+                Tableau API v3 scripts would be included here for production:
+                <script type="text/javascript" src="https://public.tableau.com/javascripts/api/tableau-2.min.js"></script>
+                -->
+            </section>
+        </div>
+    </main>
+
+    <footer class="ts-footer" role="contentinfo">
+        <div class="ts-container">
+            <div class="ts-footer__content">
+                <div class="ts-footer__section">
+                    <h3>Contact Us</h3>
+                    <p><i class="fas fa-envelope"></i> support@toolsshare.com</p>
+                    <p><i class="fas fa-phone"></i> +91 9756191568</p>
+                    <p><i class="fas fa-map-marker-alt"></i> Community Tool Hub</p>
+                </div>
+                
+                <div class="ts-footer__section">
+                    <h3>Quick Links</h3>
+                    <ul class="ts-footer__links">
+                        <li><a href="index.html"><i class="fas fa-home"></i> Home</a></li>
+                        <li><a href="categories.html"><i class="fas fa-th-large"></i> Categories</a></li>
+                        <li><a href="about.html"><i class="fas fa-info-circle"></i> About</a></li>
+                        <li><a href="terms.html"><i class="fas fa-file-text"></i> Terms</a></li>
+                    </ul>
+                </div>
+                
+                <div class="ts-footer__section">
+                    <h3>Account</h3>
+                    <ul class="ts-footer__links">
+                        <li><a href="profile.html"><i class="fas fa-user"></i> Profile</a></li>
+                        <li><a href="cart.html"><i class="fas fa-shopping-cart"></i> Cart</a></li>
+                        <li><a href="login.html"><i class="fas fa-sign-in-alt"></i> Login/Signup</a></li>
+                        <li><a href="profile.html#wishlist"><i class="fas fa-heart"></i> Wishlist</a></li>
+                    </ul>
+                </div>
+                
+                <div class="ts-footer__section">
+                    <h3>Follow Us</h3>
+                    <div class="ts-footer__social">
+                        <a href="#" aria-label="Facebook"><i class="fab fa-facebook"></i></a>
+                        <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                        <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                        <a href="#" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+                        <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+                    </div>
+                    <div class="ts-mt-4">
+                        <a href="#" class="ts-btn ts-btn--sm ts-btn--primary">
+                            <i class="fab fa-linkedin"></i> Connect on LinkedIn
+                        </a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="ts-footer__bottom">
+                <p>&copy; 2025 ToolsShare. All rights reserved.</p>
+                
+                <details class="ts-footer__dev-notes">
+                    <summary><i class="fas fa-code"></i> Developer Notes</summary>
+                    <div class="ts-footer__dev-notes-content">
+                        <h4>HTTPS Setup for Demo:</h4>
+                        <p><strong>1.</strong> Run local server: <code>python -m http.server 8080</code> or <code>npx serve</code></p>
+                        <p><strong>2.</strong> Create HTTPS tunnel: <code>ngrok http 8080</code></p>
+                        <p><strong>3.</strong> Use the HTTPS ngrok URL for demonstration</p>
+                        
+                        <h4>TLS Certificate:</h4>
+                        <p>For production hosting, enable TLS via Let's Encrypt in your hosting provider's dashboard.</p>
+                        
+                        <h4>Performance:</h4>
+                        <p>Single CSS file, deferred JS, lazy-loaded images, minimal reflow for optimal browser performance.</p>
+                        
+                        <h4>Public Repository:</h4>
+                        <p>Code is public at: <a href="#" target="_blank"><i class="fab fa-github"></i> [REPO LINK PLACEHOLDER]</a></p>
+                    </div>
+                </details>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,650 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Checkout - ToolsShare</title>
+    <link rel="icon" type="image/x-icon" href="assets/favicon.ico">
+    <link rel="stylesheet" href="assets/css/main.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <script src="assets/js/app.js" defer></script>
+</head>
+<body>
+    <a href="#main" class="ts-skip-link">Skip to main content</a>
+    
+    <header class="ts-header" role="banner">
+        <!-- Top Bar -->
+        <div class="ts-header__top">
+            <div class="ts-header__top-container">
+                <div class="ts-header__contact">
+                    <a href="mailto:support@toolsshare.com" aria-label="Email support">
+                        <i class="fas fa-envelope"></i> support@toolsshare.com
+                    </a>
+                    <a href="tel:+919756191568" aria-label="Call support">
+                        <i class="fas fa-phone"></i> +91 9756191568
+                    </a>
+                </div>
+                
+                <div class="ts-header__search">
+                    <label for="header-search" class="sr-only">Search for tools</label>
+                    <input 
+                        type="search" 
+                        id="header-search"
+                        class="ts-header__search-input"
+                        placeholder="Search for power tools, cameras, gardening equipment..."
+                        aria-label="Search for tools"
+                    >
+                </div>
+                
+                <div class="ts-header__social">
+                    <a href="#" aria-label="Facebook"><i class="fab fa-facebook"></i></a>
+                    <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                    <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                    <a href="#" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+                    <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Main Navigation -->
+        <nav class="ts-header__nav" aria-label="Primary navigation">
+            <div class="ts-header__nav-container">
+                <ul class="ts-header__nav-list">
+                    <li class="ts-header__nav-item">
+                        <a href="index.html"><i class="fas fa-home"></i> Home</a>
+                    </li>
+                    <li class="ts-header__nav-item">
+                        <a href="about.html"><i class="fas fa-info-circle"></i> About Us</a>
+                    </li>
+                    <li class="ts-header__nav-item">
+                        <a href="categories.html"><i class="fas fa-th-large"></i> Categories</a>
+                    </li>
+                    <li class="ts-header__nav-item">
+                        <a href="cart.html"><i class="fas fa-shopping-cart"></i> My Cart</a>
+                    </li>
+                    <li class="ts-header__nav-item">
+                        <a href="profile.html"><i class="fas fa-user"></i> Profile</a>
+                    </li>
+                    <li class="ts-header__nav-item">
+                        <a href="terms.html"><i class="fas fa-file-text"></i> Terms of Use</a>
+                    </li>
+                    <li class="ts-header__nav-item">
+                        <a href="login.html"><i class="fas fa-sign-in-alt"></i> LOGIN / SIGNUP</a>
+                    </li>
+                    <li class="ts-header__nav-item">
+                        <a href="#" class="ts-btn ts-btn--primary"><i class="fas fa-plus"></i> LIST YOUR TOOL</a>
+                    </li>
+                    <li class="ts-header__nav-item">
+                        <a href="profile.html#wishlist"><i class="fas fa-heart"></i> WISHLIST</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+        
+        <!-- Tagline -->
+        <div class="ts-header__tagline">
+            <div class="ts-header__tagline-pill">
+                ToolsShare – Your Community Tool Shed
+            </div>
+        </div>
+    </header>
+
+    <main id="main" class="ts-main">
+        <div class="ts-container">
+            <!-- Breadcrumbs -->
+            <nav class="ts-breadcrumbs" aria-label="Breadcrumb">
+                <ol>
+                    <li><a href="index.html"><i class="fas fa-home"></i> Home</a></li>
+                    <li><a href="cart.html"><i class="fas fa-shopping-cart"></i> Cart</a></li>
+                    <li>Checkout</li>
+                </ol>
+            </nav>
+
+            <h1><i class="fas fa-credit-card"></i> Secure Checkout</h1>
+
+            <!-- Progress Stepper -->
+            <div class="ts-stepper ts-mb-8" role="tablist" aria-label="Checkout progress">
+                <div class="ts-stepper__step ts-stepper__step--active">
+                    <div class="ts-stepper__icon" role="tab" aria-selected="true">1</div>
+                    <div class="ts-stepper__label">Cart Review</div>
+                </div>
+                <div class="ts-stepper__step">
+                    <div class="ts-stepper__icon" role="tab" aria-selected="false">2</div>
+                    <div class="ts-stepper__label">Shipping Info</div>
+                </div>
+                <div class="ts-stepper__step">
+                    <div class="ts-stepper__icon" role="tab" aria-selected="false">3</div>
+                    <div class="ts-stepper__label">Payment</div>
+                </div>
+                <div class="ts-stepper__step">
+                    <div class="ts-stepper__icon" role="tab" aria-selected="false">4</div>
+                    <div class="ts-stepper__label">Confirmation</div>
+                </div>
+            </div>
+
+            <div style="display: grid; grid-template-columns: 2fr 1fr; gap: 2rem; align-items: start;">
+                <!-- Checkout Forms -->
+                <section class="ts-checkout-content">
+                    <!-- Step 1: Cart Review -->
+                    <div class="ts-checkout-section" id="checkout-step-1">
+                        <div class="ts-card">
+                            <h2><i class="fas fa-shopping-cart"></i> Review Your Order</h2>
+                            
+                            <div class="ts-order-item">
+                                <img src="https://images.pexels.com/photos/162553/keys-workshop-mechanic-tools-162553.jpeg?auto=compress&cs=tinysrgb&w=100" alt="Professional Drill Set" loading="lazy">
+                                <div class="ts-order-item-details">
+                                    <h3>Professional Drill Set</h3>
+                                    <p>Owner: Mike R. • 2 days</p>
+                                    <p>Jan 25-26, 2025</p>
+                                </div>
+                                <div class="ts-order-item-price">
+                                    <span class="ts-price">$50.00</span>
+                                    <button class="ts-btn ts-btn--sm ts-btn--secondary" data-action="edit-quantity">
+                                        <i class="fas fa-edit"></i> Edit
+                                    </button>
+                                </div>
+                            </div>
+
+                            <div class="ts-order-item">
+                                <img src="https://images.pexels.com/photos/90946/pexels-photo-90946.jpeg?auto=compress&cs=tinysrgb&w=100" alt="DSLR Camera Kit" loading="lazy">
+                                <div class="ts-order-item-details">
+                                    <h3>DSLR Camera Kit</h3>
+                                    <p>Owner: Sarah M. • 1 day</p>
+                                    <p>Jan 26, 2025</p>
+                                </div>
+                                <div class="ts-order-item-price">
+                                    <span class="ts-price">$45.00</span>
+                                    <button class="ts-btn ts-btn--sm ts-btn--secondary" data-action="edit-quantity">
+                                        <i class="fas fa-edit"></i> Edit
+                                    </button>
+                                </div>
+                            </div>
+
+                            <div class="ts-order-item">
+                                <img src="https://images.pexels.com/photos/416978/pexels-photo-416978.jpeg?auto=compress&cs=tinysrgb&w=100" alt="Garden Tool Set" loading="lazy">
+                                <div class="ts-order-item-details">
+                                    <h3>Garden Tool Set</h3>
+                                    <p>Owner: Lisa K. • 3 days</p>
+                                    <p>Jan 27-29, 2025</p>
+                                </div>
+                                <div class="ts-order-item-price">
+                                    <span class="ts-price">$45.00</span>
+                                    <button class="ts-btn ts-btn--sm ts-btn--secondary" data-action="edit-quantity">
+                                        <i class="fas fa-edit"></i> Edit
+                                    </button>
+                                </div>
+                            </div>
+
+                            <div class="ts-checkout-actions ts-mt-6">
+                                <button class="ts-btn ts-btn--primary ts-next-step">
+                                    <i class="fas fa-arrow-right"></i> Continue to Shipping
+                                </button>
+                                <a href="cart.html" class="ts-btn ts-btn--secondary">
+                                    <i class="fas fa-arrow-left"></i> Back to Cart
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Step 2: Shipping Info -->
+                    <div class="ts-checkout-section" id="checkout-step-2" style="display: none;">
+                        <div class="ts-card">
+                            <h2><i class="fas fa-truck"></i> Shipping Information</h2>
+                            
+                            <form id="shipping-form" novalidate>
+                                <div class="ts-grid ts-grid--2">
+                                    <div class="ts-form-group">
+                                        <label for="shipping-first-name" class="ts-label ts-label--required">First Name</label>
+                                        <input type="text" id="shipping-first-name" name="firstName" class="ts-input" required>
+                                    </div>
+                                    <div class="ts-form-group">
+                                        <label for="shipping-last-name" class="ts-label ts-label--required">Last Name</label>
+                                        <input type="text" id="shipping-last-name" name="lastName" class="ts-input" required>
+                                    </div>
+                                </div>
+
+                                <div class="ts-form-group">
+                                    <label for="shipping-phone" class="ts-label ts-label--required">Phone Number</label>
+                                    <input type="tel" id="shipping-phone" name="phone" class="ts-input" required>
+                                </div>
+
+                                <div class="ts-form-group">
+                                    <label for="shipping-email" class="ts-label ts-label--required">Email Address</label>
+                                    <input type="email" id="shipping-email" name="email" class="ts-input" required>
+                                    <div class="ts-help-text">Rental confirmations will be sent to this email.</div>
+                                </div>
+
+                                <div class="ts-form-group">
+                                    <label for="shipping-address" class="ts-label ts-label--required">Street Address</label>
+                                    <input type="text" id="shipping-address" name="address" class="ts-input" required>
+                                </div>
+
+                                <div class="ts-grid ts-grid--2">
+                                    <div class="ts-form-group">
+                                        <label for="shipping-city" class="ts-label ts-label--required">City</label>
+                                        <input type="text" id="shipping-city" name="city" class="ts-input" required>
+                                    </div>
+                                    <div class="ts-form-group">
+                                        <label for="shipping-state" class="ts-label ts-label--required">State</label>
+                                        <select id="shipping-state" name="state" class="ts-select" required>
+                                            <option value="">Select State</option>
+                                            <option value="AL">Alabama</option>
+                                            <option value="CA">California</option>
+                                            <option value="FL">Florida</option>
+                                            <option value="NY">New York</option>
+                                            <option value="TX">Texas</option>
+                                        </select>
+                                    </div>
+                                </div>
+
+                                <div class="ts-form-group">
+                                    <label for="shipping-postal" class="ts-label ts-label--required">Postal Code</label>
+                                    <input type="text" id="shipping-postal" name="postalCode" class="ts-input" required>
+                                </div>
+
+                                <div class="ts-form-group">
+                                    <label class="ts-label">Delivery Method</label>
+                                    <div class="ts-radio-group">
+                                        <label class="ts-radio-label">
+                                            <input type="radio" name="deliveryMethod" value="standard" class="ts-radio" checked>
+                                            <i class="fas fa-truck"></i> Standard Delivery (Free) - 2-3 business days
+                                        </label>
+                                        <label class="ts-radio-label">
+                                            <input type="radio" name="deliveryMethod" value="express" class="ts-radio">
+                                            <i class="fas fa-shipping-fast"></i> Express Delivery (+$15) - Next business day
+                                        </label>
+                                    </div>
+                                </div>
+                            </form>
+
+                            <div class="ts-checkout-actions ts-mt-6">
+                                <button class="ts-btn ts-btn--primary ts-next-step">
+                                    <i class="fas fa-arrow-right"></i> Continue to Payment
+                                </button>
+                                <button class="ts-btn ts-btn--secondary ts-prev-step">
+                                    <i class="fas fa-arrow-left"></i> Back to Cart Review
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Step 3: Payment -->
+                    <div class="ts-checkout-section" id="checkout-step-3" style="display: none;">
+                        <div class="ts-card">
+                            <h2><i class="fas fa-credit-card"></i> Payment Method</h2>
+                            
+                            <form id="payment-form" novalidate>
+                                <div class="ts-form-group">
+                                    <label class="ts-label ts-label--required">Choose Payment Method</label>
+                                    <div class="ts-radio-group">
+                                        <label class="ts-radio-label">
+                                            <input type="radio" name="paymentMethod" value="card" class="ts-radio" checked>
+                                            <i class="fas fa-credit-card"></i> Credit/Debit Card
+                                        </label>
+                                        <label class="ts-radio-label">
+                                            <input type="radio" name="paymentMethod" value="upi" class="ts-radio">
+                                            <i class="fas fa-mobile-alt"></i> UPI Payment
+                                        </label>
+                                        <label class="ts-radio-label">
+                                            <input type="radio" name="paymentMethod" value="netbanking" class="ts-radio">
+                                            <i class="fas fa-university"></i> Net Banking
+                                        </label>
+                                        <label class="ts-radio-label">
+                                            <input type="radio" name="paymentMethod" value="cod" class="ts-radio">
+                                            <i class="fas fa-money-bill-wave"></i> Cash on Delivery
+                                        </label>
+                                    </div>
+                                </div>
+
+                                <!-- Card Payment Fields -->
+                                <div id="card-fields" class="ts-payment-fields">
+                                    <div class="ts-form-group">
+                                        <label for="card-number" class="ts-label ts-label--required">Card Number</label>
+                                        <input type="text" id="card-number" name="cardNumber" class="ts-input" placeholder="1234 5678 9012 3456">
+                                    </div>
+
+                                    <div class="ts-grid ts-grid--2">
+                                        <div class="ts-form-group">
+                                            <label for="card-expiry" class="ts-label ts-label--required">Expiry Date</label>
+                                            <input type="text" id="card-expiry" name="cardExpiry" class="ts-input" placeholder="MM/YY">
+                                        </div>
+                                        <div class="ts-form-group">
+                                            <label for="card-cvv" class="ts-label ts-label--required">CVV</label>
+                                            <input type="text" id="card-cvv" name="cardCvv" class="ts-input" placeholder="123">
+                                        </div>
+                                    </div>
+
+                                    <div class="ts-form-group">
+                                        <label class="ts-checkbox-label">
+                                            <input type="checkbox" name="saveCard" class="ts-checkbox">
+                                            <i class="fas fa-check"></i> Save this card for future payments
+                                        </label>
+                                    </div>
+                                </div>
+
+                                <!-- UPI Payment Fields -->
+                                <div id="upi-fields" class="ts-payment-fields" style="display: none;">
+                                    <div class="ts-form-group">
+                                        <label for="upi-id" class="ts-label ts-label--required">UPI ID</label>
+                                        <input type="text" id="upi-id" name="upiId" class="ts-input" placeholder="username@upi">
+                                        <div class="ts-help-text">Enter your UPI ID (e.g., 9876543210@paytm)</div>
+                                    </div>
+                                </div>
+
+                                <!-- Net Banking Fields -->
+                                <div id="net-banking-fields" class="ts-payment-fields" style="display: none;">
+                                    <div class="ts-form-group">
+                                        <label for="bank-select" class="ts-label ts-label--required">Select Your Bank</label>
+                                        <select id="bank-select" name="bank" class="ts-select">
+                                            <option value="">Choose your bank</option>
+                                            <option value="sbi">State Bank of India</option>
+                                            <option value="hdfc">HDFC Bank</option>
+                                            <option value="icici">ICICI Bank</option>
+                                            <option value="axis">Axis Bank</option>
+                                            <option value="kotak">Kotak Mahindra Bank</option>
+                                        </select>
+                                    </div>
+                                </div>
+
+                                <!-- Trust Badges -->
+                                <div class="ts-trust-badges ts-mt-6">
+                                    <h3><i class="fas fa-shield-alt"></i> Secure Payment</h3>
+                                    <div class="ts-badges">
+                                        <img src="https://images.pexels.com/photos/60504/security-protection-anti-virus-software-60504.jpeg?auto=compress&cs=tinysrgb&w=150" alt="SSL Secured badge" loading="lazy">
+                                        <span class="ts-badge">256-bit SSL encryption</span>
+                                        <span class="ts-badge">PCI DSS compliant</span>
+                                        <span class="ts-badge">Fraud protection</span>
+                                    </div>
+                                    <p class="ts-help-text">Your payment information is encrypted and secure. We never store your card details.</p>
+                                </div>
+                            </form>
+
+                            <div class="ts-checkout-actions ts-mt-6">
+                                <button class="ts-btn ts-btn--primary ts-next-step">
+                                    <i class="fas fa-arrow-right"></i> Review Order
+                                </button>
+                                <button class="ts-btn ts-btn--secondary ts-prev-step">
+                                    <i class="fas fa-arrow-left"></i> Back to Shipping
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Step 4: Final Review & Place Order -->
+                    <div class="ts-checkout-section" id="checkout-step-4" style="display: none;">
+                        <div class="ts-card">
+                            <h2><i class="fas fa-check-circle"></i> Final Review</h2>
+                            
+                            <div class="ts-order-review">
+                                <h3>Order Details</h3>
+                                <div class="ts-review-section">
+                                    <h4>Items (3)</h4>
+                                    <ul class="ts-review-list">
+                                        <li>Professional Drill Set × 2 days = $50.00</li>
+                                        <li>DSLR Camera Kit × 1 day = $45.00</li>
+                                        <li>Garden Tool Set × 3 days = $45.00</li>
+                                    </ul>
+                                </div>
+
+                                <div class="ts-review-section">
+                                    <h4>Shipping Address</h4>
+                                    <p>John Smith<br>123 Main Street<br>Anytown, ST 12345<br>Phone: (555) 123-4567</p>
+                                </div>
+
+                                <div class="ts-review-section">
+                                    <h4>Payment Method</h4>
+                                    <p>Credit Card ending in ****3456</p>
+                                </div>
+
+                                <div class="ts-review-section">
+                                    <h4>Delivery Method</h4>
+                                    <p>Standard Delivery (2-3 business days)</p>
+                                </div>
+                            </div>
+
+                            <div class="ts-checkout-actions ts-mt-6">
+                                <button class="ts-btn ts-btn--primary ts-btn--lg" id="place-order-btn" style="width: 100%;">
+                                    <i class="fas fa-lock"></i> Place Order Securely
+                                </button>
+                                <button class="ts-btn ts-btn--secondary ts-prev-step">
+                                    <i class="fas fa-arrow-left"></i> Back to Payment
+                                </button>
+                                
+                                <div class="ts-refund-policy ts-mt-4">
+                                    <p class="ts-help-text">
+                                        <i class="fas fa-info-circle"></i>
+                                        <strong>Refund Policy:</strong> Free cancellation up to 24 hours before pickup. 
+                                        Security deposits are held in escrow and refunded upon safe return of items.
+                                        <a href="terms.html#refund" class="ts-link">View full terms</a>
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Order Summary Sidebar -->
+                <aside class="ts-order-summary" role="complementary" aria-label="Order summary">
+                    <div class="ts-card">
+                        <h2>Order Summary</h2>
+                        
+                        <div class="ts-summary-line">
+                            <span>Subtotal (3 items):</span>
+                            <span>$140.00</span>
+                        </div>
+                        
+                        <div class="ts-summary-line">
+                            <span>Service Fee:</span>
+                            <span>$7.00</span>
+                        </div>
+                        
+                        <div class="ts-summary-line">
+                            <span>Delivery:</span>
+                            <span id="delivery-cost">Free</span>
+                        </div>
+                        
+                        <div class="ts-summary-line">
+                            <span>Insurance:</span>
+                            <span>$8.00</span>
+                        </div>
+                        
+                        <div class="ts-summary-line">
+                            <span>Taxes:</span>
+                            <span>$12.40</span>
+                        </div>
+                        
+                        <hr class="ts-summary-divider">
+                        
+                        <div class="ts-summary-line ts-summary-total">
+                            <span><strong>Total:</strong></span>
+                            <span><strong>$167.40</strong></span>
+                        </div>
+
+                        <div class="ts-security-deposits ts-mt-4">
+                            <h3>Security Deposits</h3>
+                            <p class="ts-help-text">Held in escrow, refunded on return</p>
+                            <div class="ts-summary-line">
+                                <span>Total Deposits:</span>
+                                <span><strong>$350.00</strong></span>
+                            </div>
+                        </div>
+
+                        <div class="ts-payment-schedule ts-mt-4">
+                            <h3>Payment Schedule</h3>
+                            <div class="ts-summary-line">
+                                <span>Due Today:</span>
+                                <span><strong>$517.40</strong></span>
+                            </div>
+                            <div class="ts-summary-line">
+                                <span>Refund on Return:</span>
+                                <span><strong>$350.00</strong></span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Rental Timeline -->
+                    <div class="ts-card ts-mt-6">
+                        <h3><i class="fas fa-calendar-alt"></i> Rental Timeline</h3>
+                        <div class="ts-timeline">
+                            <div class="ts-timeline-item">
+                                <div class="ts-timeline-date">Jan 25</div>
+                                <div class="ts-timeline-content">
+                                    <strong>Pickup Day</strong><br>
+                                    Drill Set pickup
+                                </div>
+                            </div>
+                            <div class="ts-timeline-item">
+                                <div class="ts-timeline-date">Jan 26</div>
+                                <div class="ts-timeline-content">
+                                    <strong>Camera Pickup</strong><br>
+                                    DSLR Kit pickup<br>
+                                    Drill Set return
+                                </div>
+                            </div>
+                            <div class="ts-timeline-item">
+                                <div class="ts-timeline-date">Jan 27</div>
+                                <div class="ts-timeline-content">
+                                    <strong>Garden Tools</strong><br>
+                                    Garden Set pickup<br>
+                                    Camera return
+                                </div>
+                            </div>
+                            <div class="ts-timeline-item">
+                                <div class="ts-timeline-date">Jan 29</div>
+                                <div class="ts-timeline-content">
+                                    <strong>Final Return</strong><br>
+                                    Garden Set return
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </aside>
+            </div>
+
+            <!-- Escrow Modal -->
+            <div class="ts-modal" id="escrow-modal" hidden aria-hidden="true" role="dialog" aria-labelledby="escrow-title">
+                <div class="ts-modal__content">
+                    <button class="ts-modal__close" aria-label="Close modal">
+                        <i class="fas fa-times"></i>
+                    </button>
+                    
+                    <div class="ts-processing" id="escrow-processing">
+                        <h2 id="escrow-title"><i class="fas fa-shield-alt"></i> Secure Escrow Processing</h2>
+                        <div class="ts-text-center">
+                            <div class="ts-spinner" style="margin: 2rem auto;">
+                                <i class="fas fa-spinner fa-spin" style="font-size: 3rem; color: var(--ts-accent-hover);"></i>
+                            </div>
+                            <p>Processing your payment securely...</p>
+                            <p class="ts-help-text">Your funds are being authorized to escrow. This may take a few moments.</p>
+                        </div>
+                    </div>
+
+                    <div class="ts-success" id="escrow-success" style="display: none;">
+                        <h2><i class="fas fa-check-circle" style="color: var(--ts-success);"></i> Order Confirmed!</h2>
+                        <div class="ts-escrow-explanation">
+                            <h3>How Escrow Works:</h3>
+                            <ol>
+                                <li><strong>Funds Secured:</strong> Your payment ($517.40) is held safely in escrow</li>
+                                <li><strong>Sellers Notified:</strong> Tool owners have been notified of your rental</li>
+                                <li><strong>Pickup Coordination:</strong> You'll receive pickup details via email</li>
+                                <li><strong>Funds Released:</strong> Payment released to owners upon successful pickup</li>
+                                <li><strong>Deposits Refunded:</strong> Security deposits ($350) refunded on safe return</li>
+                            </ol>
+                            
+                            <div class="ts-order-confirmation ts-mt-6">
+                                <h3>Order #TS-2025-001234</h3>
+                                <p><strong>Confirmation sent to:</strong> john.smith@email.com</p>
+                                <p><strong>Estimated pickup:</strong> January 25, 2025</p>
+                            </div>
+
+                            <div class="ts-next-steps ts-mt-6">
+                                <h3>What's Next?</h3>
+                                <ul>
+                                    <li>Check your email for pickup instructions</li>
+                                    <li>Tool owners will contact you within 2 hours</li>
+                                    <li>Bring valid ID for pickup verification</li>
+                                    <li>Inspect tools before taking possession</li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <div class="ts-modal-actions ts-mt-6">
+                            <a href="profile.html" class="ts-btn ts-btn--primary">
+                                <i class="fas fa-user"></i> View My Orders
+                            </a>
+                            <a href="index.html" class="ts-btn ts-btn--secondary">
+                                <i class="fas fa-home"></i> Back to Home
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Performance Metrics -->
+            <section class="ts-checkout-metrics ts-mt-12">
+                <h2>Checkout Performance & Security</h2>
+                <figure class="ts-figure">
+                    <img src="https://images.pexels.com/photos/590022/pexels-photo-590022.jpeg?auto=compress&cs=tinysrgb&w=800" alt="Security and performance metrics dashboard showing transaction success rates and security scores" loading="lazy">
+                    <figcaption class="ts-figcaption">
+                        Transaction success rates and security metrics for our checkout process. Higher values indicate better performance and security.
+                    </figcaption>
+                </figure>
+            </section>
+        </div>
+    </main>
+
+    <footer class="ts-footer" role="contentinfo">
+        <div class="ts-container">
+            <div class="ts-footer__content">
+                <div class="ts-footer__section">
+                    <h3>Contact Us</h3>
+                    <p><i class="fas fa-envelope"></i> support@toolsshare.com</p>
+                    <p><i class="fas fa-phone"></i> +91 9756191568</p>
+                    <p><i class="fas fa-map-marker-alt"></i> Community Tool Hub</p>
+                </div>
+                
+                <div class="ts-footer__section">
+                    <h3>Quick Links</h3>
+                    <ul class="ts-footer__links">
+                        <li><a href="index.html"><i class="fas fa-home"></i> Home</a></li>
+                        <li><a href="categories.html"><i class="fas fa-th-large"></i> Categories</a></li>
+                        <li><a href="about.html"><i class="fas fa-info-circle"></i> About</a></li>
+                        <li><a href="terms.html"><i class="fas fa-file-text"></i> Terms</a></li>
+                    </ul>
+                </div>
+                
+                <div class="ts-footer__section">
+                    <h3>Account</h3>
+                    <ul class="ts-footer__links">
+                        <li><a href="profile.html"><i class="fas fa-user"></i> Profile</a></li>
+                        <li><a href="cart.html"><i class="fas fa-shopping-cart"></i> Cart</a></li>
+                        <li><a href="login.html"><i class="fas fa-sign-in-alt"></i> Login/Signup</a></li>
+                        <li><a href="profile.html#wishlist"><i class="fas fa-heart"></i> Wishlist</a></li>
+                    </ul>
+                </div>
+                
+                <div class="ts-footer__section">
+                    <h3>Follow Us</h3>
+                    <div class="ts-footer__social">
+                        <a href="#" aria-label="Facebook"><i class="fab fa-facebook"></i></a>
+                        <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                        <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                        <a href="#" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+                        <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+                    </div>
+                    <div class="ts-mt-4">
+                        <a href="#" class="ts-btn ts-btn--sm ts-btn--primary">
+                            <i class="fab fa-linkedin"></i> Connect on LinkedIn
+                        </a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="ts-footer__bottom">
+                <p>&copy; 2025 ToolsShare. All rights reserved.</p>
+                <p class="ts-footer__dev-notes">Code is public at: <a href="#" target="_blank"><i class="fab fa-github"></i> [REPO LINK PLACEHOLDER]</a></p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

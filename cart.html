@@ -1,0 +1,482 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shopping Cart - ToolsShare</title>
+    <link rel="icon" type="image/x-icon" href="assets/favicon.ico">
+    <link rel="stylesheet" href="assets/css/main.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <script src="assets/js/app.js" defer></script>
+</head>
+<body>
+    <a href="#main" class="ts-skip-link">Skip to main content</a>
+    
+    <header class="ts-header" role="banner">
+        <!-- Top Bar -->
+        <div class="ts-header__top">
+            <div class="ts-header__top-container">
+                <div class="ts-header__contact">
+                    <a href="mailto:support@toolsshare.com" aria-label="Email support">
+                        <i class="fas fa-envelope"></i> support@toolsshare.com
+                    </a>
+                    <a href="tel:+919756191568" aria-label="Call support">
+                        <i class="fas fa-phone"></i> +91 9756191568
+                    </a>
+                </div>
+                
+                <div class="ts-header__search">
+                    <label for="header-search" class="sr-only">Search for tools</label>
+                    <input 
+                        type="search" 
+                        id="header-search"
+                        class="ts-header__search-input"
+                        placeholder="Search for power tools, cameras, gardening equipment..."
+                        aria-label="Search for tools"
+                    >
+                </div>
+                
+                <div class="ts-header__social">
+                    <a href="#" aria-label="Facebook"><i class="fab fa-facebook"></i></a>
+                    <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                    <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                    <a href="#" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+                    <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Main Navigation -->
+        <nav class="ts-header__nav" aria-label="Primary navigation">
+            <div class="ts-header__nav-container">
+                <ul class="ts-header__nav-list">
+                    <li class="ts-header__nav-item">
+                        <a href="index.html"><i class="fas fa-home"></i> Home</a>
+                    </li>
+                    <li class="ts-header__nav-item">
+                        <a href="about.html"><i class="fas fa-info-circle"></i> About Us</a>
+                    </li>
+                    <li class="ts-header__nav-item">
+                        <a href="categories.html"><i class="fas fa-th-large"></i> Categories</a>
+                    </li>
+                    <li class="ts-header__nav-item">
+                        <a href="cart.html"><i class="fas fa-shopping-cart"></i> My Cart</a>
+                    </li>
+                    <li class="ts-header__nav-item">
+                        <a href="profile.html"><i class="fas fa-user"></i> Profile</a>
+                    </li>
+                    <li class="ts-header__nav-item">
+                        <a href="terms.html"><i class="fas fa-file-text"></i> Terms of Use</a>
+                    </li>
+                    <li class="ts-header__nav-item">
+                        <a href="login.html"><i class="fas fa-sign-in-alt"></i> LOGIN / SIGNUP</a>
+                    </li>
+                    <li class="ts-header__nav-item">
+                        <a href="#" class="ts-btn ts-btn--primary"><i class="fas fa-plus"></i> LIST YOUR TOOL</a>
+                    </li>
+                    <li class="ts-header__nav-item">
+                        <a href="profile.html#wishlist"><i class="fas fa-heart"></i> WISHLIST</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+        
+        <!-- Tagline -->
+        <div class="ts-header__tagline">
+            <div class="ts-header__tagline-pill">
+                ToolsShare – Your Community Tool Shed
+            </div>
+        </div>
+    </header>
+
+    <main id="main" class="ts-main">
+        <div class="ts-container">
+            <!-- Breadcrumbs -->
+            <nav class="ts-breadcrumbs" aria-label="Breadcrumb">
+                <ol>
+                    <li><a href="index.html"><i class="fas fa-home"></i> Home</a></li>
+                    <li>Shopping Cart</li>
+                </ol>
+            </nav>
+
+            <h1><i class="fas fa-shopping-cart"></i> My Cart</h1>
+
+            <div style="display: grid; grid-template-columns: 2fr 1fr; gap: 2rem; align-items: start;">
+                <!-- Cart Items -->
+                <section class="ts-cart-items" aria-label="Cart items">
+                    <div class="ts-card">
+                        <h2>Items in Your Cart</h2>
+                        
+                        <!-- Cart Item 1 -->
+                        <article class="ts-cart-item">
+                            <div class="ts-cart-item__image">
+                                <img src="https://images.pexels.com/photos/162553/keys-workshop-mechanic-tools-162553.jpeg?auto=compress&cs=tinysrgb&w=200" alt="Professional Drill Set" loading="lazy">
+                            </div>
+                            
+                            <div class="ts-cart-item__details">
+                                <h3><a href="product.html" class="ts-link"><i class="fas fa-external-link-alt"></i> Professional Drill Set</a></h3>
+                                <p class="ts-cart-item__owner">Owner: Mike R. (⭐⭐⭐⭐⭐ 4.9/5)</p>
+                                <p class="ts-cart-item__price">$25.00 per day</p>
+                                
+                                <div class="ts-cart-item__controls">
+                                    <div class="ts-quantity-control">
+                                        <label for="drill-days" class="ts-label">Rental Days:</label>
+                                        <select id="drill-days" class="ts-select ts-qty-input" data-product-id="drill-set" style="width: auto; display: inline-block;">
+                                            <option value="1">1 day</option>
+                                            <option value="2" selected>2 days</option>
+                                            <option value="3">3 days</option>
+                                            <option value="4">4 days</option>
+                                            <option value="5">5 days</option>
+                                            <option value="7">1 week</option>
+                                        </select>
+                                    </div>
+                                    
+                                    <div class="ts-cart-item__dates">
+                                        <label for="drill-start-date" class="ts-label">Start Date:</label>
+                                        <input type="date" id="drill-start-date" class="ts-input" style="width: auto; display: inline-block;" value="2025-01-25">
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="ts-cart-item__total">
+                                <p class="ts-item-subtotal">$50.00</p>
+                                <button class="ts-btn ts-btn--sm ts-btn--danger" data-action="remove-from-cart" data-product-id="drill-set">
+                                    <i class="fas fa-trash"></i> Remove
+                                </button>
+                            </div>
+                        </article>
+
+                        <!-- Cart Item 2 -->
+                        <article class="ts-cart-item">
+                            <div class="ts-cart-item__image">
+                                <img src="https://images.pexels.com/photos/90946/pexels-photo-90946.jpeg?auto=compress&cs=tinysrgb&w=200" alt="DSLR Camera Kit" loading="lazy">
+                            </div>
+                            
+                            <div class="ts-cart-item__details">
+                                <h3><a href="product.html" class="ts-link"><i class="fas fa-external-link-alt"></i> DSLR Camera Kit</a></h3>
+                                <p class="ts-cart-item__owner">Owner: Sarah M. (⭐⭐⭐⭐⭐ 4.8/5)</p>
+                                <p class="ts-cart-item__price">$45.00 per day</p>
+                                
+                                <div class="ts-cart-item__controls">
+                                    <div class="ts-quantity-control">
+                                        <label for="camera-days" class="ts-label">Rental Days:</label>
+                                        <select id="camera-days" class="ts-select ts-qty-input" data-product-id="camera-kit" style="width: auto; display: inline-block;">
+                                            <option value="1" selected>1 day</option>
+                                            <option value="2">2 days</option>
+                                            <option value="3">3 days</option>
+                                            <option value="4">4 days</option>
+                                            <option value="5">5 days</option>
+                                            <option value="7">1 week</option>
+                                        </select>
+                                    </div>
+                                    
+                                    <div class="ts-cart-item__dates">
+                                        <label for="camera-start-date" class="ts-label">Start Date:</label>
+                                        <input type="date" id="camera-start-date" class="ts-input" style="width: auto; display: inline-block;" value="2025-01-26">
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="ts-cart-item__total">
+                                <p class="ts-item-subtotal">$45.00</p>
+                                <button class="ts-btn ts-btn--sm ts-btn--danger" data-action="remove-from-cart" data-product-id="camera-kit">
+                                    <i class="fas fa-trash"></i> Remove
+                                </button>
+                            </div>
+                        </article>
+
+                        <!-- Cart Item 3 -->
+                        <article class="ts-cart-item">
+                            <div class="ts-cart-item__image">
+                                <img src="https://images.pexels.com/photos/416978/pexels-photo-416978.jpeg?auto=compress&cs=tinysrgb&w=200" alt="Garden Tool Set" loading="lazy">
+                            </div>
+                            
+                            <div class="ts-cart-item__details">
+                                <h3><a href="product.html" class="ts-link"><i class="fas fa-external-link-alt"></i> Garden Tool Set</a></h3>
+                                <p class="ts-cart-item__owner">Owner: Lisa K. (⭐⭐⭐⭐☆ 4.2/5)</p>
+                                <p class="ts-cart-item__price">$15.00 per day</p>
+                                
+                                <div class="ts-cart-item__controls">
+                                    <div class="ts-quantity-control">
+                                        <label for="garden-days" class="ts-label">Rental Days:</label>
+                                        <select id="garden-days" class="ts-select ts-qty-input" data-product-id="garden-set" style="width: auto; display: inline-block;">
+                                            <option value="1">1 day</option>
+                                            <option value="2">2 days</option>
+                                            <option value="3" selected>3 days</option>
+                                            <option value="4">4 days</option>
+                                            <option value="5">5 days</option>
+                                            <option value="7">1 week</option>
+                                        </select>
+                                    </div>
+                                    
+                                    <div class="ts-cart-item__dates">
+                                        <label for="garden-start-date" class="ts-label">Start Date:</label>
+                                        <input type="date" id="garden-start-date" class="ts-input" style="width: auto; display: inline-block;" value="2025-01-27">
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="ts-cart-item__total">
+                                <p class="ts-item-subtotal">$45.00</p>
+                                <button class="ts-btn ts-btn--sm ts-btn--danger" data-action="remove-from-cart" data-product-id="garden-set">
+                                    <i class="fas fa-trash"></i> Remove
+                                </button>
+                            </div>
+                        </article>
+                    </div>
+                </section>
+
+                <!-- Cart Summary -->
+                <aside class="ts-cart-summary" role="complementary" aria-label="Order summary">
+                    <div class="ts-card">
+                        <h2>Order Summary</h2>
+                        
+                        <div class="ts-summary-line">
+                            <span>Subtotal:</span>
+                            <span id="cart-subtotal">$140.00</span>
+                        </div>
+                        
+                        <div class="ts-summary-line">
+                            <span>Service Fee:</span>
+                            <span>$7.00</span>
+                        </div>
+                        
+                        <div class="ts-summary-line">
+                            <span>Insurance (Optional):</span>
+                            <span>$8.00</span>
+                        </div>
+                        
+                        <div class="ts-summary-line">
+                            <span>Taxes:</span>
+                            <span>$12.40</span>
+                        </div>
+                        
+                        <hr class="ts-summary-divider">
+                        
+                        <div class="ts-summary-line ts-summary-total">
+                            <span><strong>Total:</strong></span>
+                            <span id="cart-total"><strong>$167.40</strong></span>
+                        </div>
+
+                        <div class="ts-security-deposits ts-mt-4">
+                            <h3>Security Deposits</h3>
+                            <p class="ts-help-text">
+                                Security deposits are held during rental and refunded upon safe return of items.
+                            </p>
+                            <div class="ts-summary-line">
+                                <span>Drill Set:</span>
+                                <span>$100.00</span>
+                            </div>
+                            <div class="ts-summary-line">
+                                <span>Camera Kit:</span>
+                                <span>$200.00</span>
+                            </div>
+                            <div class="ts-summary-line">
+                                <span>Garden Tools:</span>
+                                <span>$50.00</span>
+                            </div>
+                            <div class="ts-summary-line">
+                                <span><strong>Total Deposits:</strong></span>
+                                <span><strong>$350.00</strong></span>
+                            </div>
+                        </div>
+                        
+                        <div class="ts-cart-actions ts-mt-6">
+                            <a href="checkout.html" class="ts-btn ts-btn--primary ts-btn--lg" style="width: 100%;">
+                                <i class="fas fa-credit-card"></i> Proceed to Checkout
+                            </a>
+                            
+                            <a href="categories.html" class="ts-btn ts-btn--secondary ts-mt-4" style="width: 100%;">
+                                <i class="fas fa-arrow-left"></i> Continue Shopping
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Policies -->
+                    <div class="ts-card ts-mt-6">
+                        <h3><i class="fas fa-shield-alt"></i> Our Policies</h3>
+                        
+                        <div class="ts-policy-item">
+                            <h4><i class="fas fa-truck"></i> Delivery & Pickup</h4>
+                            <p>Free local delivery within 5 miles. Pickup available at owner's location.</p>
+                        </div>
+                        
+                        <div class="ts-policy-item">
+                            <h4><i class="fas fa-undo"></i> Returns</h4>
+                            <p>Return tools in original condition by agreed time. Late fees may apply.</p>
+                        </div>
+                        
+                        <div class="ts-policy-item">
+                            <h4><i class="fas fa-tools"></i> Damage Protection</h4>
+                            <p>Optional insurance available. Normal wear and tear is expected.</p>
+                        </div>
+                        
+                        <div class="ts-policy-item">
+                            <h4><i class="fas fa-credit-card"></i> Payment Security</h4>
+                            <p>All payments processed securely. Deposits held in escrow until return.</p>
+                        </div>
+                    </div>
+                </aside>
+            </div>
+
+            <!-- Empty Cart State (Hidden by default) -->
+            <div id="empty-cart-state" class="ts-text-center ts-hidden">
+                <figure class="ts-figure">
+                    <img src="https://images.pexels.com/photos/3768911/pexels-photo-3768911.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Empty shopping cart illustration" loading="lazy">
+                    <figcaption class="ts-figcaption">
+                        Your cart is currently empty. Browse our tool categories to find what you need for your next project.
+                    </figcaption>
+                </figure>
+                
+                <h2>Your Cart is Empty</h2>
+                <p>Looks like you haven't added any tools to your cart yet.</p>
+                
+                <div class="ts-empty-cart-actions">
+                    <a href="categories.html" class="ts-btn ts-btn--primary ts-btn--lg">
+                        <i class="fas fa-search"></i> Browse Tools
+                    </a>
+                    <a href="index.html" class="ts-btn ts-btn--secondary ts-btn--lg">
+                        <i class="fas fa-home"></i> Go Home
+                    </a>
+                </div>
+            </div>
+
+            <!-- Recommended Tools -->
+            <section class="ts-recommended-tools ts-mt-12">
+                <h2>You Might Also Like</h2>
+                <div class="ts-grid ts-grid--4">
+                    <article class="ts-card ts-product-card">
+                        <div class="ts-card__header">
+                            <img src="https://images.pexels.com/photos/5691659/pexels-photo-5691659.jpeg?auto=compress&cs=tinysrgb&w=400" alt="Circular Saw" loading="lazy">
+                        </div>
+                        <div class="ts-card__content">
+                            <h3 class="ts-card__title">Circular Saw</h3>
+                            <p class="ts-card__subtitle">⭐⭐⭐⭐⭐ (31 reviews)</p>
+                            <p class="ts-price">$35/day</p>
+                        </div>
+                        <div class="ts-card__footer">
+                            <button class="ts-btn ts-btn--sm ts-btn--primary" data-action="add-to-cart" data-product-id="circular-saw">
+                                <i class="fas fa-cart-plus"></i> Add to Cart
+                            </button>
+                            <a href="product.html" class="ts-btn ts-btn--sm ts-btn--secondary">
+                                <i class="fas fa-eye"></i> View
+                            </a>
+                        </div>
+                    </article>
+
+                    <article class="ts-card ts-product-card">
+                        <div class="ts-card__header">
+                            <img src="https://images.pexels.com/photos/3752198/pexels-photo-3752198.jpeg?auto=compress&cs=tinysrgb&w=400" alt="Socket Wrench Set" loading="lazy">
+                        </div>
+                        <div class="ts-card__content">
+                            <h3 class="ts-card__title">Socket Wrench Set</h3>
+                            <p class="ts-card__subtitle">⭐⭐⭐⭐☆ (15 reviews)</p>
+                            <p class="ts-price">$20/day</p>
+                        </div>
+                        <div class="ts-card__footer">
+                            <button class="ts-btn ts-btn--sm ts-btn--primary" data-action="add-to-cart" data-product-id="wrench-set">
+                                <i class="fas fa-cart-plus"></i> Add to Cart
+                            </button>
+                            <a href="product.html" class="ts-btn ts-btn--sm ts-btn--secondary">
+                                <i class="fas fa-eye"></i> View
+                            </a>
+                        </div>
+                    </article>
+
+                    <article class="ts-card ts-product-card">
+                        <div class="ts-card__header">
+                            <img src="https://images.pexels.com/photos/1266810/pexels-photo-1266810.jpeg?auto=compress&cs=tinysrgb&w=400" alt="Tile Saw" loading="lazy">
+                        </div>
+                        <div class="ts-card__content">
+                            <h3 class="ts-card__title">Tile Saw</h3>
+                            <p class="ts-card__subtitle">⭐⭐⭐⭐⭐ (22 reviews)</p>
+                            <p class="ts-price">$50/day</p>
+                        </div>
+                        <div class="ts-card__footer">
+                            <button class="ts-btn ts-btn--sm ts-btn--primary" data-action="add-to-cart" data-product-id="tile-saw">
+                                <i class="fas fa-cart-plus"></i> Add to Cart
+                            </button>
+                            <a href="product.html" class="ts-btn ts-btn--sm ts-btn--secondary">
+                                <i class="fas fa-eye"></i> View
+                            </a>
+                        </div>
+                    </article>
+
+                    <article class="ts-card ts-product-card">
+                        <div class="ts-card__header">
+                            <img src="https://images.pexels.com/photos/1251175/pexels-photo-1251175.jpeg?auto=compress&cs=tinysrgb&w=400" alt="Impact Driver" loading="lazy">
+                        </div>
+                        <div class="ts-card__content">
+                            <h3 class="ts-card__title">Impact Driver Set</h3>
+                            <p class="ts-card__subtitle">⭐⭐⭐⭐⭐ (18 reviews)</p>
+                            <p class="ts-price">$20/day</p>
+                        </div>
+                        <div class="ts-card__footer">
+                            <button class="ts-btn ts-btn--sm ts-btn--primary" data-action="add-to-cart" data-product-id="impact-driver">
+                                <i class="fas fa-cart-plus"></i> Add to Cart
+                            </button>
+                            <a href="product.html" class="ts-btn ts-btn--sm ts-btn--secondary">
+                                <i class="fas fa-eye"></i> View
+                            </a>
+                        </div>
+                    </article>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <footer class="ts-footer" role="contentinfo">
+        <div class="ts-container">
+            <div class="ts-footer__content">
+                <div class="ts-footer__section">
+                    <h3>Contact Us</h3>
+                    <p><i class="fas fa-envelope"></i> support@toolsshare.com</p>
+                    <p><i class="fas fa-phone"></i> +91 9756191568</p>
+                    <p><i class="fas fa-map-marker-alt"></i> Community Tool Hub</p>
+                </div>
+                
+                <div class="ts-footer__section">
+                    <h3>Quick Links</h3>
+                    <ul class="ts-footer__links">
+                        <li><a href="index.html"><i class="fas fa-home"></i> Home</a></li>
+                        <li><a href="categories.html"><i class="fas fa-th-large"></i> Categories</a></li>
+                        <li><a href="about.html"><i class="fas fa-info-circle"></i> About</a></li>
+                        <li><a href="terms.html"><i class="fas fa-file-text"></i> Terms</a></li>
+                    </ul>
+                </div>
+                
+                <div class="ts-footer__section">
+                    <h3>Account</h3>
+                    <ul class="ts-footer__links">
+                        <li><a href="profile.html"><i class="fas fa-user"></i> Profile</a></li>
+                        <li><a href="cart.html"><i class="fas fa-shopping-cart"></i> Cart</a></li>
+                        <li><a href="login.html"><i class="fas fa-sign-in-alt"></i> Login/Signup</a></li>
+                        <li><a href="profile.html#wishlist"><i class="fas fa-heart"></i> Wishlist</a></li>
+                    </ul>
+                </div>
+                
+                <div class="ts-footer__section">
+                    <h3>Follow Us</h3>
+                    <div class="ts-footer__social">
+                        <a href="#" aria-label="Facebook"><i class="fab fa-facebook"></i></a>
+                        <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                        <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                        <a href="#" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+                        <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+                    </div>
+                    <div class="ts-mt-4">
+                        <a href="#" class="ts-btn ts-btn--sm ts-btn--primary">
+                            <i class="fab fa-linkedin"></i> Connect on LinkedIn
+                        </a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="ts-footer__bottom">
+                <p>&copy; 2025 ToolsShare. All rights reserved.</p>
+                <p class="ts-footer__dev-notes">Code is public at: <a href="#" target="_blank"><i class="fab fa-github"></i> [REPO LINK PLACEHOLDER]</a></p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

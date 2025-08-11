@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login - ToolsShare</title>
+    <link rel="icon" type="image/x-icon" href="assets/favicon.ico">
+    <link rel="stylesheet" href="assets/css/main.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <script src="assets/js/app.js" defer></script>
+</head>
+<body>
+    <a href="#main" class="ts-skip-link">Skip to main content</a>
+    
+    <header class="ts-header" role="banner">
+        <!-- Top Bar -->
+        <div class="ts-header__top">
+            <div class="ts-header__top-container">
+                <div class="ts-header__contact">
+                    <a href="mailto:support@toolsshare.com" aria-label="Email support">
+                        <i class="fas fa-envelope"></i> support@toolsshare.com
+                    </a>
+                    <a href="tel:+919756191568" aria-label="Call support">
+                        <i class="fas fa-phone"></i> +91 9756191568
+                    </a>
+                </div>
+                
+                <div class="ts-header__search">
+                    <label for="header-search" class="sr-only">Search for tools</label>
+                    <input 
+                        type="search" 
+                        id="header-search"
+                        class="ts-header__search-input"
+                        placeholder="Search for power tools, cameras, gardening equipment..."
+                        aria-label="Search for tools"
+                    >
+                </div>
+                
+                <div class="ts-header__social">
+                    <a href="#" aria-label="Facebook"><i class="fab fa-facebook"></i></a>
+                    <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                    <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                    <a href="#" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+                    <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Main Navigation -->
+        <nav class="ts-header__nav" aria-label="Primary navigation">
+            <div class="ts-header__nav-container">
+                <ul class="ts-header__nav-list">
+                    <li class="ts-header__nav-item">
+                        <a href="index.html"><i class="fas fa-home"></i> Home</a>
+                    </li>
+                    <li class="ts-header__nav-item">
+                        <a href="about.html"><i class="fas fa-info-circle"></i> About Us</a>
+                    </li>
+                    <li class="ts-header__nav-item">
+                        <a href="categories.html"><i class="fas fa-th-large"></i> Categories</a>
+                    </li>
+                    <li class="ts-header__nav-item">
+                        <a href="cart.html"><i class="fas fa-shopping-cart"></i> My Cart</a>
+                    </li>
+                    <li class="ts-header__nav-item">
+                        <a href="profile.html"><i class="fas fa-user"></i> Profile</a>
+                    </li>
+                    <li class="ts-header__nav-item">
+                        <a href="terms.html"><i class="fas fa-file-text"></i> Terms of Use</a>
+                    </li>
+                    <li class="ts-header__nav-item">
+                        <a href="login.html"><i class="fas fa-sign-in-alt"></i> LOGIN / SIGNUP</a>
+                    </li>
+                    <li class="ts-header__nav-item">
+                        <a href="#" class="ts-btn ts-btn--primary"><i class="fas fa-plus"></i> LIST YOUR TOOL</a>
+                    </li>
+                    <li class="ts-header__nav-item">
+                        <a href="profile.html#wishlist"><i class="fas fa-heart"></i> WISHLIST</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+        
+        <!-- Tagline -->
+        <div class="ts-header__tagline">
+            <div class="ts-header__tagline-pill">
+                ToolsShare – Your Community Tool Shed
+            </div>
+        </div>
+    </header>
+
+    <main id="main" class="ts-main">
+        <div class="ts-container ts-container--narrow">
+            <!-- Breadcrumbs -->
+            <nav class="ts-breadcrumbs" aria-label="Breadcrumb">
+                <ol>
+                    <li><a href="index.html"><i class="fas fa-home"></i> Home</a></li>
+                    <li>Login</li>
+                </ol>
+            </nav>
+
+            <div class="ts-auth-container ts-text-center">
+                <h1>Welcome Back to ToolsShare</h1>
+                <p class="ts-mb-8">Sign in to your account to start renting and sharing tools</p>
+
+                <!-- Login Form -->
+                <div class="ts-card">
+                    <form id="login-form" class="ts-auth-form" novalidate>
+                        <div class="ts-form-group">
+                            <label for="login-email" class="ts-label ts-label--required">Email Address</label>
+                            <input 
+                                type="email" 
+                                id="login-email" 
+                                name="email" 
+                                class="ts-input" 
+                                required 
+                                aria-describedby="email-help"
+                                autocomplete="email"
+                            >
+                            <div id="email-help" class="ts-help-text">
+                                We'll never share your email with anyone else.
+                            </div>
+                        </div>
+
+                        <div class="ts-form-group">
+                            <label for="login-password" class="ts-label ts-label--required">Password</label>
+                            <input 
+                                type="password" 
+                                id="login-password" 
+                                name="password" 
+                                class="ts-input" 
+                                required 
+                                autocomplete="current-password"
+                            >
+                        </div>
+
+                        <div class="ts-form-group">
+                            <label class="ts-checkbox-label">
+                                <input type="checkbox" class="ts-checkbox" name="remember">
+                                <i class="fas fa-check"></i> Remember me for 30 days
+                            </label>
+                        </div>
+
+                        <button type="submit" class="ts-btn ts-btn--primary ts-btn--lg" style="width: 100%;">
+                            <i class="fas fa-sign-in-alt"></i> Sign In
+                        </button>
+                    </form>
+
+                    <div class="ts-auth-links ts-mt-6">
+                        <p>
+                            <a href="#" class="ts-link">
+                                <i class="fas fa-key"></i> Forgot your password?
+                            </a>
+                        </p>
+                        <p class="ts-mt-4">
+                            Don't have an account? 
+                            <a href="signup.html" class="ts-link">
+                                <i class="fas fa-user-plus"></i> Sign up here
+                            </a>
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Security Notice -->
+                <div class="ts-security-notice ts-mt-8">
+                    <figure class="ts-figure">
+                        <img src="https://images.pexels.com/photos/60504/security-protection-anti-virus-software-60504.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Security shield icon representing secure login" loading="lazy">
+                        <figcaption class="ts-figcaption">
+                            Our security measures ensure your data is protected. Higher security ratings indicate better protection.
+                        </figcaption>
+                    </figure>
+                    
+                    <div class="ts-card ts-mt-4">
+                        <h3><i class="fas fa-shield-alt"></i> Why HTTPS Matters</h3>
+                        <p>ToolsShare uses HTTPS encryption to protect your login credentials and personal information. Always verify the lock icon in your browser's address bar before entering sensitive information.</p>
+                        
+                        <div class="ts-security-features">
+                            <ul>
+                                <li><i class="fas fa-check"></i> 256-bit SSL encryption</li>
+                                <li><i class="fas fa-check"></i> Secure password hashing</li>
+                                <li><i class="fas fa-check"></i> Two-factor authentication available</li>
+                                <li><i class="fas fa-check"></i> Regular security audits</li>
+                            </ul>
+                        </div>
+
+                        <div class="ts-privacy-note ts-mt-4">
+                            <p><small>
+                                <i class="fas fa-user-shield"></i>
+                                By signing in, you agree to our 
+                                <a href="terms.html" class="ts-link">Terms of Service</a> 
+                                and 
+                                <a href="terms.html#privacy" class="ts-link">Privacy Policy</a>. 
+                                We respect your privacy and will never sell your personal information.
+                            </small></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer class="ts-footer" role="contentinfo">
+        <div class="ts-container">
+            <div class="ts-footer__content">
+                <div class="ts-footer__section">
+                    <h3>Contact Us</h3>
+                    <p><i class="fas fa-envelope"></i> support@toolsshare.com</p>
+                    <p><i class="fas fa-phone"></i> +91 9756191568</p>
+                    <p><i class="fas fa-map-marker-alt"></i> Community Tool Hub</p>
+                </div>
+                
+                <div class="ts-footer__section">
+                    <h3>Quick Links</h3>
+                    <ul class="ts-footer__links">
+                        <li><a href="index.html"><i class="fas fa-home"></i> Home</a></li>
+                        <li><a href="categories.html"><i class="fas fa-th-large"></i> Categories</a></li>
+                        <li><a href="about.html"><i class="fas fa-info-circle"></i> About</a></li>
+                        <li><a href="terms.html"><i class="fas fa-file-text"></i> Terms</a></li>
+                    </ul>
+                </div>
+                
+                <div class="ts-footer__section">
+                    <h3>Account</h3>
+                    <ul class="ts-footer__links">
+                        <li><a href="profile.html"><i class="fas fa-user"></i> Profile</a></li>
+                        <li><a href="cart.html"><i class="fas fa-shopping-cart"></i> Cart</a></li>
+                        <li><a href="login.html"><i class="fas fa-sign-in-alt"></i> Login/Signup</a></li>
+                        <li><a href="profile.html#wishlist"><i class="fas fa-heart"></i> Wishlist</a></li>
+                    </ul>
+                </div>
+                
+                <div class="ts-footer__section">
+                    <h3>Follow Us</h3>
+                    <div class="ts-footer__social">
+                        <a href="#" aria-label="Facebook"><i class="fab fa-facebook"></i></a>
+                        <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                        <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                        <a href="#" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+                        <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+                    </div>
+                    <div class="ts-mt-4">
+                        <a href="#" class="ts-btn ts-btn--sm ts-btn--primary">
+                            <i class="fab fa-linkedin"></i> Connect on LinkedIn
+                        </a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="ts-footer__bottom">
+                <p>&copy; 2025 ToolsShare. All rights reserved.</p>
+                <p class="ts-footer__dev-notes">Code is public at: <a href="#" target="_blank"><i class="fab fa-github"></i> [REPO LINK PLACEHOLDER]</a></p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

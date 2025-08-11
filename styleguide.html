@@ -1,0 +1,831 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Style Guide - ToolsShare</title>
+    <link rel="icon" type="image/x-icon" href="assets/favicon.ico">
+    <link rel="stylesheet" href="assets/css/main.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <script src="assets/js/app.js" defer></script>
+</head>
+<body>
+    <a href="#main" class="ts-skip-link">Skip to main content</a>
+    
+    <header class="ts-header" role="banner">
+        <!-- Top Bar -->
+        <div class="ts-header__top">
+            <div class="ts-header__top-container">
+                <div class="ts-header__contact">
+                    <a href="mailto:support@toolsshare.com" aria-label="Email support">
+                        <i class="fas fa-envelope"></i> support@toolsshare.com
+                    </a>
+                    <a href="tel:+919756191568" aria-label="Call support">
+                        <i class="fas fa-phone"></i> +91 9756191568
+                    </a>
+                </div>
+                
+                <div class="ts-header__search">
+                    <label for="header-search" class="sr-only">Search for tools</label>
+                    <input 
+                        type="search" 
+                        id="header-search"
+                        class="ts-header__search-input"
+                        placeholder="Search for power tools, cameras, gardening equipment..."
+                        aria-label="Search for tools"
+                    >
+                </div>
+                
+                <div class="ts-header__social">
+                    <a href="#" aria-label="Facebook"><i class="fab fa-facebook"></i></a>
+                    <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                    <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                    <a href="#" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+                    <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Main Navigation -->
+        <nav class="ts-header__nav" aria-label="Primary navigation">
+            <div class="ts-header__nav-container">
+                <ul class="ts-header__nav-list">
+                    <li class="ts-header__nav-item">
+                        <a href="index.html"><i class="fas fa-home"></i> Home</a>
+                    </li>
+                    <li class="ts-header__nav-item">
+                        <a href="about.html"><i class="fas fa-info-circle"></i> About Us</a>
+                    </li>
+                    <li class="ts-header__nav-item">
+                        <a href="categories.html"><i class="fas fa-th-large"></i> Categories</a>
+                    </li>
+                    <li class="ts-header__nav-item">
+                        <a href="cart.html"><i class="fas fa-shopping-cart"></i> My Cart</a>
+                    </li>
+                    <li class="ts-header__nav-item">
+                        <a href="profile.html"><i class="fas fa-user"></i> Profile</a>
+                    </li>
+                    <li class="ts-header__nav-item">
+                        <a href="terms.html"><i class="fas fa-file-text"></i> Terms of Use</a>
+                    </li>
+                    <li class="ts-header__nav-item">
+                        <a href="login.html"><i class="fas fa-sign-in-alt"></i> LOGIN / SIGNUP</a>
+                    </li>
+                    <li class="ts-header__nav-item">
+                        <a href="#" class="ts-btn ts-btn--primary"><i class="fas fa-plus"></i> LIST YOUR TOOL</a>
+                    </li>
+                    <li class="ts-header__nav-item">
+                        <a href="profile.html#wishlist"><i class="fas fa-heart"></i> WISHLIST</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+        
+        <!-- Tagline -->
+        <div class="ts-header__tagline">
+            <div class="ts-header__tagline-pill">
+                ToolsShare – Your Community Tool Shed
+            </div>
+        </div>
+    </header>
+
+    <main id="main" class="ts-main">
+        <div class="ts-container">
+            <!-- Breadcrumbs -->
+            <nav class="ts-breadcrumbs" aria-label="Breadcrumb">
+                <ol>
+                    <li><a href="index.html"><i class="fas fa-home"></i> Home</a></li>
+                    <li>Style Guide</li>
+                </ol>
+            </nav>
+
+            <header class="ts-styleguide-header ts-text-center ts-mb-12">
+                <h1><i class="fas fa-palette"></i> ToolsShare Style Guide</h1>
+                <p>Comprehensive documentation of our design system, tokens, and components</p>
+            </header>
+
+            <!-- Design Tokens -->
+            <section class="ts-design-tokens ts-mb-12">
+                <h2><i class="fas fa-swatchbook"></i> Design Tokens</h2>
+                
+                <!-- Colors -->
+                <div class="ts-card ts-mb-8">
+                    <h3>Color System</h3>
+                    <p>Our color palette is designed for accessibility and brand consistency across all touchpoints.</p>
+                    
+                    <div class="ts-color-grid">
+                        <div class="ts-color-swatch">
+                            <div class="ts-color-preview" style="background-color: #0A0908;"></div>
+                            <div class="ts-color-info">
+                                <strong>Primary Background</strong><br>
+                                <code>#0A0908</code><br>
+                                <code>var(--ts-bg-primary)</code>
+                            </div>
+                        </div>
+                        
+                        <div class="ts-color-swatch">
+                            <div class="ts-color-preview" style="background-color: #F9DBBD;"></div>
+                            <div class="ts-color-info">
+                                <strong>Primary Text</strong><br>
+                                <code>#F9DBBD</code><br>
+                                <code>var(--ts-text-primary)</code>
+                            </div>
+                        </div>
+                        
+                        <div class="ts-color-swatch">
+                            <div class="ts-color-preview" style="background-color: #3B82F6;"></div>
+                            <div class="ts-color-info">
+                                <strong>Accent Hover</strong><br>
+                                <code>#3B82F6</code><br>
+                                <code>var(--ts-accent-hover)</code>
+                            </div>
+                        </div>
+                        
+                        <div class="ts-color-swatch">
+                            <div class="ts-color-preview" style="background-color: #28a745;"></div>
+                            <div class="ts-color-info">
+                                <strong>Success</strong><br>
+                                <code>#28a745</code><br>
+                                <code>var(--ts-success)</code>
+                            </div>
+                        </div>
+                        
+                        <div class="ts-color-swatch">
+                            <div class="ts-color-preview" style="background-color: #ffc107;"></div>
+                            <div class="ts-color-info">
+                                <strong>Warning</strong><br>
+                                <code>#ffc107</code><br>
+                                <code>var(--ts-warning)</code>
+                            </div>
+                        </div>
+                        
+                        <div class="ts-color-swatch">
+                            <div class="ts-color-preview" style="background-color: #dc3545;"></div>
+                            <div class="ts-color-info">
+                                <strong>Danger</strong><br>
+                                <code>#dc3545</code><br>
+                                <code>var(--ts-danger)</code>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Typography -->
+                <div class="ts-card ts-mb-8">
+                    <h3>Typography</h3>
+                    <p>Our typography system uses Segoe UI for optimal readability across all devices.</p>
+                    
+                    <div class="ts-typography-scale">
+                        <div class="ts-type-sample">
+                            <h1 class="ts-type-example">Heading 1 - 2rem (32px)</h1>
+                            <code>font-size: var(--ts-font-size-3xl); font-weight: 700;</code>
+                        </div>
+                        
+                        <div class="ts-type-sample">
+                            <h2 class="ts-type-example">Heading 2 - 1.5rem (24px)</h2>
+                            <code>font-size: var(--ts-font-size-2xl); font-weight: 700;</code>
+                        </div>
+                        
+                        <div class="ts-type-sample">
+                            <h3 class="ts-type-example">Heading 3 - 1.25rem (20px)</h3>
+                            <code>font-size: var(--ts-font-size-xl); font-weight: 700;</code>
+                        </div>
+                        
+                        <div class="ts-type-sample">
+                            <p class="ts-type-example">Body Text - 1rem (16px)</p>
+                            <code>font-size: var(--ts-font-size-base); line-height: 1.5;</code>
+                        </div>
+                        
+                        <div class="ts-type-sample">
+                            <small class="ts-type-example">Small Text - 0.875rem (14px)</small>
+                            <code>font-size: var(--ts-font-size-sm);</code>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Spacing -->
+                <div class="ts-card ts-mb-8">
+                    <h3>Spacing System</h3>
+                    <p>Our 8px-based spacing system ensures consistent rhythm and alignment.</p>
+                    
+                    <div class="ts-spacing-scale">
+                        <div class="ts-spacing-item">
+                            <div class="ts-spacing-visual" style="width: 4px; height: 20px; background: var(--ts-accent-hover);"></div>
+                            <code>--ts-space-1: 0.25rem (4px)</code>
+                        </div>
+                        <div class="ts-spacing-item">
+                            <div class="ts-spacing-visual" style="width: 8px; height: 20px; background: var(--ts-accent-hover);"></div>
+                            <code>--ts-space-2: 0.5rem (8px)</code>
+                        </div>
+                        <div class="ts-spacing-item">
+                            <div class="ts-spacing-visual" style="width: 16px; height: 20px; background: var(--ts-accent-hover);"></div>
+                            <code>--ts-space-4: 1rem (16px)</code>
+                        </div>
+                        <div class="ts-spacing-item">
+                            <div class="ts-spacing-visual" style="width: 32px; height: 20px; background: var(--ts-accent-hover);"></div>
+                            <code>--ts-space-8: 2rem (32px)</code>
+                        </div>
+                        <div class="ts-spacing-item">
+                            <div class="ts-spacing-visual" style="width: 64px; height: 20px; background: var(--ts-accent-hover);"></div>
+                            <code>--ts-space-16: 4rem (64px)</code>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Border Radius -->
+                <div class="ts-card ts-mb-8">
+                    <h3>Border Radius</h3>
+                    <p>Consistent border radius values for a cohesive visual language.</p>
+                    
+                    <div class="ts-radius-examples">
+                        <div class="ts-radius-item">
+                            <div class="ts-radius-visual" style="border-radius: var(--ts-radius-sm);"></div>
+                            <code>--ts-radius-sm: 0.125rem (2px)</code>
+                        </div>
+                        <div class="ts-radius-item">
+                            <div class="ts-radius-visual" style="border-radius: var(--ts-radius);"></div>
+                            <code>--ts-radius: 0.25rem (4px)</code>
+                        </div>
+                        <div class="ts-radius-item">
+                            <div class="ts-radius-visual" style="border-radius: var(--ts-radius-lg);"></div>
+                            <code>--ts-radius-lg: 0.5rem (8px)</code>
+                        </div>
+                        <div class="ts-radius-item">
+                            <div class="ts-radius-visual" style="border-radius: var(--ts-radius-xl);"></div>
+                            <code>--ts-radius-xl: 0.75rem (12px)</code>
+                        </div>
+                        <div class="ts-radius-item">
+                            <div class="ts-radius-visual" style="border-radius: var(--ts-radius-full);"></div>
+                            <code>--ts-radius-full: 50px</code>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Components -->
+            <section class="ts-components ts-mb-12">
+                <h2><i class="fas fa-cubes"></i> Components</h2>
+                
+                <!-- Buttons -->
+                <div class="ts-card ts-mb-8">
+                    <h3>Buttons</h3>
+                    <p>Button components with consistent styling and interactive states.</p>
+                    
+                    <div class="ts-component-demo">
+                        <h4>Primary Buttons</h4>
+                        <div class="ts-button-group">
+                            <button class="ts-btn ts-btn--primary ts-btn--sm">
+                                <i class="fas fa-plus"></i> Small Primary
+                            </button>
+                            <button class="ts-btn ts-btn--primary">
+                                <i class="fas fa-check"></i> Default Primary
+                            </button>
+                            <button class="ts-btn ts-btn--primary ts-btn--lg">
+                                <i class="fas fa-star"></i> Large Primary
+                            </button>
+                        </div>
+                        
+                        <h4>Secondary Buttons</h4>
+                        <div class="ts-button-group">
+                            <button class="ts-btn ts-btn--secondary ts-btn--sm">
+                                <i class="fas fa-edit"></i> Small Secondary
+                            </button>
+                            <button class="ts-btn ts-btn--secondary">
+                                <i class="fas fa-eye"></i> Default Secondary
+                            </button>
+                            <button class="ts-btn ts-btn--secondary ts-btn--lg">
+                                <i class="fas fa-download"></i> Large Secondary
+                            </button>
+                        </div>
+                        
+                        <h4>Status Buttons</h4>
+                        <div class="ts-button-group">
+                            <button class="ts-btn ts-btn--success">
+                                <i class="fas fa-check"></i> Success
+                            </button>
+                            <button class="ts-btn ts-btn--warning">
+                                <i class="fas fa-exclamation-triangle"></i> Warning
+                            </button>
+                            <button class="ts-btn ts-btn--danger">
+                                <i class="fas fa-trash"></i> Danger
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Forms -->
+                <div class="ts-card ts-mb-8">
+                    <h3>Form Elements</h3>
+                    <p>Accessible form components with proper labeling and validation states.</p>
+                    
+                    <div class="ts-component-demo">
+                        <form class="ts-demo-form">
+                            <div class="ts-form-group">
+                                <label for="demo-input" class="ts-label ts-label--required">Text Input</label>
+                                <input type="text" id="demo-input" class="ts-input" placeholder="Enter text here">
+                                <div class="ts-help-text">This is helpful text for the user.</div>
+                            </div>
+                            
+                            <div class="ts-form-group">
+                                <label for="demo-select" class="ts-label">Select Dropdown</label>
+                                <select id="demo-select" class="ts-select">
+                                    <option value="">Choose an option</option>
+                                    <option value="1">Option 1</option>
+                                    <option value="2">Option 2</option>
+                                    <option value="3">Option 3</option>
+                                </select>
+                            </div>
+                            
+                            <div class="ts-form-group">
+                                <label for="demo-textarea" class="ts-label">Textarea</label>
+                                <textarea id="demo-textarea" class="ts-textarea" rows="4" placeholder="Enter longer text here"></textarea>
+                            </div>
+                            
+                            <div class="ts-form-group">
+                                <label class="ts-checkbox-label">
+                                    <input type="checkbox" class="ts-checkbox">
+                                    <i class="fas fa-check"></i> Checkbox option
+                                </label>
+                            </div>
+                            
+                            <div class="ts-form-group">
+                                <label class="ts-radio-label">
+                                    <input type="radio" name="demo-radio" class="ts-radio">
+                                    <i class="fas fa-circle"></i> Radio option 1
+                                </label>
+                                <label class="ts-radio-label">
+                                    <input type="radio" name="demo-radio" class="ts-radio">
+                                    <i class="fas fa-circle"></i> Radio option 2
+                                </label>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+
+                <!-- Cards -->
+                <div class="ts-card ts-mb-8">
+                    <h3>Cards</h3>
+                    <p>Flexible card components for content organization.</p>
+                    
+                    <div class="ts-component-demo">
+                        <div class="ts-grid ts-grid--2">
+                            <div class="ts-card">
+                                <div class="ts-card__header">
+                                    <h4 class="ts-card__title">Basic Card</h4>
+                                    <p class="ts-card__subtitle">Card subtitle</p>
+                                </div>
+                                <div class="ts-card__content">
+                                    <p>This is the main content area of the card. It can contain any type of content.</p>
+                                </div>
+                                <div class="ts-card__footer">
+                                    <button class="ts-btn ts-btn--primary ts-btn--sm">
+                                        <i class="fas fa-arrow-right"></i> Action
+                                    </button>
+                                </div>
+                            </div>
+                            
+                            <div class="ts-card">
+                                <div class="ts-card__header">
+                                    <img src="https://images.pexels.com/photos/162553/keys-workshop-mechanic-tools-162553.jpeg?auto=compress&cs=tinysrgb&w=400" alt="Tool example" loading="lazy">
+                                </div>
+                                <div class="ts-card__content">
+                                    <h4 class="ts-card__title">Product Card</h4>
+                                    <p class="ts-card__subtitle">⭐⭐⭐⭐⭐ (24 reviews)</p>
+                                    <p class="ts-price">$25/day</p>
+                                </div>
+                                <div class="ts-card__footer">
+                                    <button class="ts-btn ts-btn--primary ts-btn--sm">
+                                        <i class="fas fa-cart-plus"></i> Add to Cart
+                                    </button>
+                                    <button class="ts-btn ts-btn--secondary ts-btn--sm">
+                                        <i class="fas fa-heart"></i>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Tables -->
+                <div class="ts-card ts-mb-8">
+                    <h3>Tables</h3>
+                    <p>Accessible data tables with proper semantic markup.</p>
+                    
+                    <div class="ts-component-demo">
+                        <table class="ts-table">
+                            <caption>Example data table with proper accessibility</caption>
+                            <thead>
+                                <tr>
+                                    <th scope="col">Tool Name</th>
+                                    <th scope="col">Category</th>
+                                    <th scope="col">Price/Day</th>
+                                    <th scope="col">Rating</th>
+                                    <th scope="col">Actions</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>Professional Drill Set</td>
+                                    <td>Power Tools</td>
+                                    <td>$25.00</td>
+                                    <td>⭐⭐⭐⭐⭐</td>
+                                    <td>
+                                        <button class="ts-btn ts-btn--sm ts-btn--secondary">
+                                            <i class="fas fa-eye"></i> View
+                                        </button>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>DSLR Camera Kit</td>
+                                    <td>Photography</td>
+                                    <td>$45.00</td>
+                                    <td>⭐⭐⭐⭐⭐</td>
+                                    <td>
+                                        <button class="ts-btn ts-btn--sm ts-btn--secondary">
+                                            <i class="fas fa-eye"></i> View
+                                        </button>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+
+                <!-- Navigation -->
+                <div class="ts-card ts-mb-8">
+                    <h3>Navigation</h3>
+                    <p>Navigation components including breadcrumbs and tabs.</p>
+                    
+                    <div class="ts-component-demo">
+                        <h4>Breadcrumbs</h4>
+                        <nav class="ts-breadcrumbs" aria-label="Example breadcrumb">
+                            <ol>
+                                <li><a href="#"><i class="fas fa-home"></i> Home</a></li>
+                                <li><a href="#"><i class="fas fa-th-large"></i> Categories</a></li>
+                                <li><a href="#"><i class="fas fa-tools"></i> Power Tools</a></li>
+                                <li>Current Page</li>
+                            </ol>
+                        </nav>
+                        
+                        <h4>Tabs</h4>
+                        <div class="ts-tabs">
+                            <ul class="ts-tabs__list" role="tablist">
+                                <li role="presentation">
+                                    <button class="ts-tabs__tab" role="tab" aria-selected="true">
+                                        <i class="fas fa-info-circle"></i> Tab 1
+                                    </button>
+                                </li>
+                                <li role="presentation">
+                                    <button class="ts-tabs__tab" role="tab" aria-selected="false">
+                                        <i class="fas fa-cog"></i> Tab 2
+                                    </button>
+                                </li>
+                                <li role="presentation">
+                                    <button class="ts-tabs__tab" role="tab" aria-selected="false">
+                                        <i class="fas fa-star"></i> Tab 3
+                                    </button>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Figures -->
+                <div class="ts-card ts-mb-8">
+                    <h3>Figures & Images</h3>
+                    <p>Semantic figure elements with descriptive captions. <strong>Important:</strong> All figure captions must indicate directionality for charts/metrics (e.g., "Higher is better" or "Lower is better").</p>
+                    
+                    <div class="ts-component-demo">
+                        <figure class="ts-figure">
+                            <img src="https://images.pexels.com/photos/590022/pexels-photo-590022.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Example chart showing performance metrics" loading="lazy">
+                            <figcaption class="ts-figcaption">
+                                Performance metrics dashboard showing user engagement over time. Higher values indicate better platform performance and user satisfaction.
+                            </figcaption>
+                        </figure>
+                    </div>
+                </div>
+            </section>
+
+            <!-- CSS Architecture -->
+            <section class="ts-css-architecture ts-mb-12">
+                <h2><i class="fas fa-code"></i> CSS Architecture</h2>
+                
+                <div class="ts-card">
+                    <h3>Single-CSS Strategy</h3>
+                    <p>ToolsShare uses a single CSS file architecture for optimal performance and maintainability:</p>
+                    
+                    <h4>File Structure</h4>
+                    <ul>
+                        <li><strong>assets/css/main.css</strong> - Single stylesheet for entire site</li>
+                        <li>CSS Custom Properties (variables) for design tokens</li>
+                        <li>BEM methodology with <code>ts-</code> namespace</li>
+                        <li>Mobile-first responsive design</li>
+                        <li>Low specificity selectors (no !important)</li>
+                    </ul>
+                    
+                    <h4>Naming Convention</h4>
+                    <div class="ts-code-example">
+                        <pre><code>/* Block */
+.ts-card { }
+
+/* Element */
+.ts-card__header { }
+.ts-card__content { }
+.ts-card__footer { }
+
+/* Modifier */
+.ts-card--featured { }
+.ts-btn--primary { }
+.ts-btn--large { }</code></pre>
+                    </div>
+                    
+                    <h4>Extending the System</h4>
+                    <p>To add new components:</p>
+                    <ol>
+                        <li>Use existing design tokens from <code>:root</code></li>
+                        <li>Follow BEM naming with <code>ts-</code> prefix</li>
+                        <li>Keep specificity low (single class selectors)</li>
+                        <li>Add responsive breakpoints as needed</li>
+                        <li>Test accessibility and keyboard navigation</li>
+                    </ol>
+                </div>
+            </section>
+
+            <!-- Responsive Breakpoints -->
+            <section class="ts-responsive ts-mb-12">
+                <h2><i class="fas fa-mobile-alt"></i> Responsive Design</h2>
+                
+                <div class="ts-card">
+                    <h3>Breakpoint System</h3>
+                    <p>Mobile-first responsive design with consistent breakpoints:</p>
+                    
+                    <div class="ts-breakpoint-list">
+                        <div class="ts-breakpoint-item">
+                            <strong>Small (sm)</strong><br>
+                            <code>576px</code> and up<br>
+                            <small>Large phones, small tablets</small>
+                        </div>
+                        <div class="ts-breakpoint-item">
+                            <strong>Medium (md)</strong><br>
+                            <code>768px</code> and up<br>
+                            <small>Tablets, small laptops</small>
+                        </div>
+                        <div class="ts-breakpoint-item">
+                            <strong>Large (lg)</strong><br>
+                            <code>992px</code> and up<br>
+                            <small>Laptops, desktops</small>
+                        </div>
+                        <div class="ts-breakpoint-item">
+                            <strong>Extra Large (xl)</strong><br>
+                            <code>1200px</code> and up<br>
+                            <small>Large desktops</small>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Sitemap -->
+            <section class="ts-sitemap ts-mb-12">
+                <h2><i class="fas fa-sitemap"></i> Site Structure</h2>
+                
+                <div class="ts-card">
+                    <h3>Complete Sitemap</h3>
+                    <p>All pages in the ToolsShare platform:</p>
+                    
+                    <div class="ts-grid ts-grid--2">
+                        <div>
+                            <h4>Public Pages</h4>
+                            <ul class="ts-sitemap-list">
+                                <li><a href="index.html" class="ts-link"><i class="fas fa-home"></i> Home</a></li>
+                                <li><a href="about.html" class="ts-link"><i class="fas fa-info-circle"></i> About Us</a></li>
+                                <li><a href="categories.html" class="ts-link"><i class="fas fa-th-large"></i> Categories</a></li>
+                                <li><a href="product.html" class="ts-link"><i class="fas fa-tools"></i> Product Details</a></li>
+                                <li><a href="terms.html" class="ts-link"><i class="fas fa-file-text"></i> Terms of Use</a></li>
+                                <li><a href="styleguide.html" class="ts-link"><i class="fas fa-palette"></i> Style Guide</a></li>
+                                <li><a href="404.html" class="ts-link"><i class="fas fa-exclamation-triangle"></i> 404 Error</a></li>
+                            </ul>
+                        </div>
+                        
+                        <div>
+                            <h4>User Account Pages</h4>
+                            <ul class="ts-sitemap-list">
+                                <li><a href="login.html" class="ts-link"><i class="fas fa-sign-in-alt"></i> Login</a></li>
+                                <li><a href="signup.html" class="ts-link"><i class="fas fa-user-plus"></i> Sign Up</a></li>
+                                <li><a href="profile.html" class="ts-link"><i class="fas fa-user"></i> Profile</a></li>
+                                <li><a href="cart.html" class="ts-link"><i class="fas fa-shopping-cart"></i> Shopping Cart</a></li>
+                                <li><a href="checkout.html" class="ts-link"><i class="fas fa-credit-card"></i> Checkout</a></li>
+                                <li><a href="hidden/faculty.html" class="ts-link"><i class="fas fa-lock"></i> Faculty Page (Hidden)</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Performance Metrics -->
+            <section class="ts-performance-guide">
+                <h2><i class="fas fa-tachometer-alt"></i> Performance Guidelines</h2>
+                
+                <figure class="ts-figure">
+                    <img src="https://images.pexels.com/photos/590022/pexels-photo-590022.jpeg?auto=compress&cs=tinysrgb&w=800" alt="Performance metrics dashboard showing page load times, CSS file size, and JavaScript execution metrics" loading="lazy">
+                    <figcaption class="ts-figcaption">
+                        Site performance metrics including CSS file size, JavaScript execution time, and page load speeds. Lower values indicate better performance and faster user experience.
+                    </figcaption>
+                </figure>
+                
+                <div class="ts-card ts-mt-6">
+                    <h3>Consistency Enforcement</h3>
+                    <p>Our design system ensures consistency through:</p>
+                    <ul>
+                        <li><strong>Design Tokens:</strong> Centralized values in CSS custom properties</li>
+                        <li><strong>Component Library:</strong> Reusable, documented components</li>
+                        <li><strong>Naming Convention:</strong> BEM methodology with namespace</li>
+                        <li><strong>Single Source:</strong> One CSS file prevents style conflicts</li>
+                        <li><strong>Documentation:</strong> This style guide as reference</li>
+                        <li><strong>Accessibility:</strong> WCAG AA compliance built into components</li>
+                    </ul>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <footer class="ts-footer" role="contentinfo">
+        <div class="ts-container">
+            <div class="ts-footer__content">
+                <div class="ts-footer__section">
+                    <h3>Contact Us</h3>
+                    <p><i class="fas fa-envelope"></i> support@toolsshare.com</p>
+                    <p><i class="fas fa-phone"></i> +91 9756191568</p>
+                    <p><i class="fas fa-map-marker-alt"></i> Community Tool Hub</p>
+                </div>
+                
+                <div class="ts-footer__section">
+                    <h3>Quick Links</h3>
+                    <ul class="ts-footer__links">
+                        <li><a href="index.html"><i class="fas fa-home"></i> Home</a></li>
+                        <li><a href="categories.html"><i class="fas fa-th-large"></i> Categories</a></li>
+                        <li><a href="about.html"><i class="fas fa-info-circle"></i> About</a></li>
+                        <li><a href="terms.html"><i class="fas fa-file-text"></i> Terms</a></li>
+                    </ul>
+                </div>
+                
+                <div class="ts-footer__section">
+                    <h3>Account</h3>
+                    <ul class="ts-footer__links">
+                        <li><a href="profile.html"><i class="fas fa-user"></i> Profile</a></li>
+                        <li><a href="cart.html"><i class="fas fa-shopping-cart"></i> Cart</a></li>
+                        <li><a href="login.html"><i class="fas fa-sign-in-alt"></i> Login/Signup</a></li>
+                        <li><a href="profile.html#wishlist"><i class="fas fa-heart"></i> Wishlist</a></li>
+                    </ul>
+                </div>
+                
+                <div class="ts-footer__section">
+                    <h3>Follow Us</h3>
+                    <div class="ts-footer__social">
+                        <a href="#" aria-label="Facebook"><i class="fab fa-facebook"></i></a>
+                        <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                        <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                        <a href="#" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+                        <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+                    </div>
+                    <div class="ts-mt-4">
+                        <a href="#" class="ts-btn ts-btn--sm ts-btn--primary">
+                            <i class="fab fa-linkedin"></i> Connect on LinkedIn
+                        </a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="ts-footer__bottom">
+                <p>&copy; 2025 ToolsShare. All rights reserved.</p>
+                <p class="ts-footer__dev-notes">Code is public at: <a href="#" target="_blank"><i class="fab fa-github"></i> [REPO LINK PLACEHOLDER]</a></p>
+            </div>
+        </div>
+    </footer>
+
+    <style>
+        /* Style Guide Specific Styles */
+        .ts-color-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 1rem;
+            margin-top: 1rem;
+        }
+
+        .ts-color-swatch {
+            text-align: center;
+        }
+
+        .ts-color-preview {
+            width: 100%;
+            height: 80px;
+            border-radius: var(--ts-radius);
+            margin-bottom: 0.5rem;
+            border: 1px solid var(--ts-divider);
+        }
+
+        .ts-color-info {
+            font-size: var(--ts-font-size-sm);
+        }
+
+        .ts-typography-scale .ts-type-sample {
+            margin-bottom: 1.5rem;
+            padding-bottom: 1rem;
+            border-bottom: 1px solid var(--ts-divider);
+        }
+
+        .ts-type-example {
+            margin-bottom: 0.5rem;
+        }
+
+        .ts-spacing-scale {
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+        }
+
+        .ts-spacing-item {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+        }
+
+        .ts-radius-examples {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            gap: 1rem;
+            margin-top: 1rem;
+        }
+
+        .ts-radius-item {
+            text-align: center;
+        }
+
+        .ts-radius-visual {
+            width: 60px;
+            height: 60px;
+            background: var(--ts-accent-hover);
+            margin: 0 auto 0.5rem;
+        }
+
+        .ts-button-group {
+            display: flex;
+            gap: 1rem;
+            margin-bottom: 1.5rem;
+            flex-wrap: wrap;
+        }
+
+        .ts-demo-form {
+            max-width: 400px;
+        }
+
+        .ts-code-example {
+            background: var(--ts-dark);
+            padding: 1rem;
+            border-radius: var(--ts-radius);
+            margin: 1rem 0;
+        }
+
+        .ts-code-example pre {
+            margin: 0;
+            color: var(--ts-text-primary);
+            font-family: 'Courier New', monospace;
+            font-size: var(--ts-font-size-sm);
+        }
+
+        .ts-breakpoint-list {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 1rem;
+            margin-top: 1rem;
+        }
+
+        .ts-breakpoint-item {
+            padding: 1rem;
+            background: var(--ts-dark);
+            border-radius: var(--ts-radius);
+            text-align: center;
+        }
+
+        .ts-sitemap-list {
+            list-style: none;
+            padding: 0;
+        }
+
+        .ts-sitemap-list li {
+            margin-bottom: 0.5rem;
+        }
+
+        .ts-sitemap-list a {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            text-decoration: none;
+            padding: 0.25rem 0;
+        }
+
+        .ts-sitemap-list a:hover {
+            color: var(--ts-accent-hover);
+        }
+    </style>
+</body>
+</html>
