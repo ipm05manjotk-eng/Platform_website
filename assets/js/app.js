@@ -1,99 +1,6 @@
 // ToolsShare Application JavaScript
 // Single JS file with deferred loading for optimal performance
-<script>
-(function () {
-  // CONFIG — keep these in sync with your UI
-  const SERVICE_FEE = 7.00;
-  const INSURANCE_FEE = 8.00;
-  // You had $12.40 tax on $140 subtotal → ~8.857142%  (12.40/140)
-  const TAX_RATE = 0.0885714286;
 
-  // Helpers
-  const $ = (sel, root = document) => root.querySelector(sel);
-  const $$ = (sel, root = document) => Array.from(root.querySelectorAll(sel));
-  const money = v => `$${v.toFixed(2)}`;
-
-  function getDays(selectEl) {
-    const v = parseInt(selectEl.value, 10);
-    return isNaN(v) ? 1 : Math.max(1, v);
-  }
-
-  function recalc() {
-    const items = $$('.ts-cart-item');
-    let subtotal = 0;
-
-    items.forEach(item => {
-      // Prefer data-price-per-day; fallback to parsing visible price
-      let pricePerDay = parseFloat(item.dataset.pricePerDay || '0');
-
-      if (!pricePerDay) {
-        const priceText = $('.ts-cart-item__price', item)?.textContent || '';
-        // expects "$25.00 per day"
-        const m = priceText.replace(/,/g,'').match(/\$([\d.]+)/);
-        pricePerDay = m ? parseFloat(m[1]) : 0;
-      }
-
-      const daysSelect = $('.ts-qty-input', item);
-      const days = daysSelect ? getDays(daysSelect) : 1;
-      const subtotalEl = $('.ts-item-subtotal', item);
-
-      const line = pricePerDay * days;
-      subtotal += line;
-
-      if (subtotalEl) subtotalEl.textContent = money(line);
-    });
-
-    // Fees & Taxes
-    const taxes = subtotal * TAX_RATE;
-    const total = subtotal + SERVICE_FEE + INSURANCE_FEE + taxes;
-
-    // Write to DOM
-    const subEl = $('#cart-subtotal');
-    const taxEl = $('#cart-taxes');
-    const totEl = $('#cart-total');
-    const svcEl = $('#service-fee');
-    const insEl = $('#insurance-fee');
-
-    if (subEl) subEl.textContent = money(subtotal);
-    if (svcEl) svcEl.textContent = money(SERVICE_FEE);
-    if (insEl) insEl.textContent = money(INSURANCE_FEE);
-    if (taxEl)  taxEl.textContent  = money(taxes);
-    if (totEl)  totEl.innerHTML    = `<strong>${money(total)}</strong>`;
-  }
-
-  function bindEvents() {
-    // Quantity/day changes
-    $$('.ts-qty-input').forEach(sel => {
-      sel.addEventListener('change', recalc);
-      sel.addEventListener('input', recalc);
-    });
-
-    // Remove buttons
-    $$('.ts-cart-item [data-action="remove-from-cart"]').forEach(btn => {
-      btn.addEventListener('click', e => {
-        e.preventDefault();
-        const item = btn.closest('.ts-cart-item');
-        if (item) item.remove();
-        recalc();
-        maybeToggleEmptyState();
-      });
-    });
-  }
-
-  function maybeToggleEmptyState() {
-    const empty = $('#empty-cart-state');
-    const hasItems = $$('.ts-cart-item').length > 0;
-    if (empty) empty.classList.toggle('ts-hidden', hasItems);
-  }
-
-  // INIT
-  window.addEventListener('DOMContentLoaded', () => {
-    bindEvents();
-    recalc();              // sync numbers on load
-    maybeToggleEmptyState();
-  });
-})();
-</script>
 class ToolsShareApp {
   constructor() {
     this.initializeApp();
@@ -936,4 +843,97 @@ notificationStyles.textContent = `
     }
   }
 `;
-document.head.appendChild(notificationStyles);
+document.head.appendChild(notificationStyles);   <script>
+(function () {
+  // CONFIG — keep these in sync with your UI
+  const SERVICE_FEE = 7.00;
+  const INSURANCE_FEE = 8.00;
+  // You had $12.40 tax on $140 subtotal → ~8.857142%  (12.40/140)
+  const TAX_RATE = 0.0885714286;
+
+  // Helpers
+  const $ = (sel, root = document) => root.querySelector(sel);
+  const $$ = (sel, root = document) => Array.from(root.querySelectorAll(sel));
+  const money = v => `$${v.toFixed(2)}`;
+
+  function getDays(selectEl) {
+    const v = parseInt(selectEl.value, 10);
+    return isNaN(v) ? 1 : Math.max(1, v);
+  }
+
+  function recalc() {
+    const items = $$('.ts-cart-item');
+    let subtotal = 0;
+
+    items.forEach(item => {
+      // Prefer data-price-per-day; fallback to parsing visible price
+      let pricePerDay = parseFloat(item.dataset.pricePerDay || '0');
+
+      if (!pricePerDay) {
+        const priceText = $('.ts-cart-item__price', item)?.textContent || '';
+        // expects "$25.00 per day"
+        const m = priceText.replace(/,/g,'').match(/\$([\d.]+)/);
+        pricePerDay = m ? parseFloat(m[1]) : 0;
+      }
+
+      const daysSelect = $('.ts-qty-input', item);
+      const days = daysSelect ? getDays(daysSelect) : 1;
+      const subtotalEl = $('.ts-item-subtotal', item);
+
+      const line = pricePerDay * days;
+      subtotal += line;
+
+      if (subtotalEl) subtotalEl.textContent = money(line);
+    });
+
+    // Fees & Taxes
+    const taxes = subtotal * TAX_RATE;
+    const total = subtotal + SERVICE_FEE + INSURANCE_FEE + taxes;
+
+    // Write to DOM
+    const subEl = $('#cart-subtotal');
+    const taxEl = $('#cart-taxes');
+    const totEl = $('#cart-total');
+    const svcEl = $('#service-fee');
+    const insEl = $('#insurance-fee');
+
+    if (subEl) subEl.textContent = money(subtotal);
+    if (svcEl) svcEl.textContent = money(SERVICE_FEE);
+    if (insEl) insEl.textContent = money(INSURANCE_FEE);
+    if (taxEl)  taxEl.textContent  = money(taxes);
+    if (totEl)  totEl.innerHTML    = `<strong>${money(total)}</strong>`;
+  }
+
+  function bindEvents() {
+    // Quantity/day changes
+    $$('.ts-qty-input').forEach(sel => {
+      sel.addEventListener('change', recalc);
+      sel.addEventListener('input', recalc);
+    });
+
+    // Remove buttons
+    $$('.ts-cart-item [data-action="remove-from-cart"]').forEach(btn => {
+      btn.addEventListener('click', e => {
+        e.preventDefault();
+        const item = btn.closest('.ts-cart-item');
+        if (item) item.remove();
+        recalc();
+        maybeToggleEmptyState();
+      });
+    });
+  }
+
+  function maybeToggleEmptyState() {
+    const empty = $('#empty-cart-state');
+    const hasItems = $$('.ts-cart-item').length > 0;
+    if (empty) empty.classList.toggle('ts-hidden', hasItems);
+  }
+
+  // INIT
+  window.addEventListener('DOMContentLoaded', () => {
+    bindEvents();
+    recalc();              // sync numbers on load
+    maybeToggleEmptyState();
+  });
+})();
+</script>
