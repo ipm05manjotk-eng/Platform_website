@@ -494,44 +494,57 @@
   };
 
   function recalc() {
-    const items = $$('.ts-cart-item');
-    let subtotal = 0;
+  const items = $$('.ts-cart-item');
+  const itemCount = items.length;
+  let subtotal = 0;
 
-    items.forEach(item => {
-      // Use data attribute; fallback to parsing the visible price if missing
-      let pricePerDay = parseFloat(item.dataset.pricePerDay || '0');
+  // line totals
+  items.forEach(item => {
+    let pricePerDay = parseFloat(item.dataset.pricePerDay || '0');
+    if (!pricePerDay) {
+      const priceText = $('.ts-cart-item__price', item)?.textContent || '';
+      const m = priceText.replace(/,/g,'').match(/\$([\d.]+)/);
+      pricePerDay = m ? parseFloat(m[1]) : 0;
+    }
 
-      if (!pricePerDay) {
-        const priceText = $('.ts-cart-item__price', item)?.textContent || '';
-        const m = priceText.replace(/,/g, '').match(/\$([\d.]+)/);
-        pricePerDay = m ? parseFloat(m[1]) : 0;
-      }
+    const daysSelect = $('.ts-qty-input', item);
+    const days = daysSelect ? getDays(daysSelect) : 1;
+    const line = pricePerDay * days;
+    subtotal += line;
 
-      const days = getDays($('.ts-qty-input', item));
-      const line = pricePerDay * days;
-      subtotal += line;
+    const subtotalEl = $('.ts-item-subtotal', item);
+    if (subtotalEl) subtotalEl.textContent = money(line);
+  });
 
-      const subtotalEl = $('.ts-item-subtotal', item);
-      if (subtotalEl) subtotalEl.textContent = money(line);
-    });
+  // fees & taxes are ZERO when cart is empty
+  const serviceFee   = itemCount > 0 ? SERVICE_FEE   : 0.00;
+  const insuranceFee = itemCount > 0 ? INSURANCE_FEE : 0.00;
+  const taxes        = itemCount > 0 ? subtotal * TAX_RATE : 0.00;
+  const total        = subtotal + serviceFee + insuranceFee + taxes;
 
-    const taxes = subtotal * TAX_RATE;
-    const total = subtotal + SERVICE_FEE + INSURANCE_FEE + taxes;
+  // write amounts
+  const subEl = $('#cart-subtotal');
+  const taxEl = $('#cart-taxes');   // make sure Taxes span has id="cart-taxes"
+  const totEl = $('#cart-total');   // only the GRAND total uses id="cart-total"
+  const svcEl = $('#service-fee');
+  const insEl = $('#insurance-fee');
 
-    // Write amounts
-    const subEl = $('#cart-subtotal');
-    const taxEl = $('#cart-taxes');
-    const totEl = $('#cart-total');
-    const svcEl = $('#service-fee');
-    const insEl = $('#insurance-fee');
+  if (subEl) subEl.textContent = money(subtotal);
+  if (svcEl) svcEl.textContent = money(serviceFee);
+  if (insEl) insEl.textContent = money(insuranceFee);
+  if (taxEl)  taxEl.textContent  = money(taxes);
+  if (totEl)  totEl.innerHTML    = `<strong>${money(total)}</strong>`;
 
-    if (subEl) subEl.textContent = money(subtotal);
-    if (svcEl) svcEl.textContent = money(SERVICE_FEE);
-    if (insEl) insEl.textContent = money(INSURANCE_FEE);
-    if (taxEl)  taxEl.textContent  = money(taxes);
-    if (totEl)  totEl.innerHTML    = `<strong>${money(total)}</strong>`;
+  // UI tweaks when empty
+  const deposits = document.querySelector('.ts-security-deposits');
+  if (deposits) deposits.classList.toggle('ts-hidden', itemCount === 0);
+
+  const checkoutBtn = document.querySelector('.ts-cart-actions .ts-btn--primary');
+  if (checkoutBtn) {
+    checkoutBtn.disabled = itemCount === 0;
+    checkoutBtn.setAttribute('aria-disabled', itemCount === 0 ? 'true' : 'false');
   }
-
+}
   function bindEvents() {
     // Change days
     $$('.ts-qty-input').forEach(sel => {
