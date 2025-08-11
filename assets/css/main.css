@@ -927,3 +927,36 @@ textarea:focus {
     box-shadow: none;
   }
 }
+/* --- Global guardrails --- */
+* { box-sizing: border-box; }
+html, body { overflow-x: hidden; }
+img { max-width: 100%; height: auto; display: block; }
+
+/* Contain content to avoid edge bleed */
+.ts-container { max-width: 1200px; margin: 0 auto; padding: 0 16px; }
+
+/* Make top bars wrap instead of pushing width */
+.ts-header__top-container,
+.ts-header__nav-list { display: flex; flex-wrap: wrap; gap: 12px; }
+
+/* Prevent super-wide search from forcing overflow */
+.ts-header__search { flex: 1 1 320px; min-width: 280px; }
+.ts-header__social, .ts-header__contact { flex: 0 1 auto; }
+
+/* Ensure nav doesn’t cause a scroll */
+.ts-header__nav-list { margin: 0; padding: 0; list-style: none; }
+
+/* Responsive grid – no horizontal scroll, cards wrap */
+.ts-grid { display: grid; gap: 24px; }
+.ts-grid--4 { grid-template-columns: repeat(4, minmax(0, 1fr)); }
+@media (max-width: 1200px) { .ts-grid--4 { grid-template-columns: repeat(3, 1fr); } }
+@media (max-width: 900px)  { .ts-grid--4 { grid-template-columns: repeat(2, 1fr); } }
+@media (max-width: 600px)  { .ts-grid--4 { grid-template-columns: 1fr; } }
+
+/* Card and image sizing that never exceeds the column */
+.ts-card { width: 100%; max-width: 100%; }
+.ts-card__header img { width: 100%; height: 220px; object-fit: cover; }
+
+/* Pills and badges shouldn't exceed width */
+.ts-header__tagline-pill { display: inline-block; max-width: 100%; }
+
